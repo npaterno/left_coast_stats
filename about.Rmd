@@ -7,3 +7,14 @@ description: |
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+# Academic 
+* BA, Mathematics, University of Montana, 2009
+* MSc, Mathematics, Portland State University, 2011
+
+By profession I'm an academic. I started my career in January 2012. I've been a contingent faculty member the entire time. I currently teach as an adjunct associate professor at [Pierce College](https://pierce.ctc.edu) and as a visiting instructor at [Pacific Lutheran University](https://www.plu.edu). 
+
+Aside from teaching but still under the academic umbrella, I am a contributor with [OpenIntro](https://www.openintro.org). Specifically I serve as the Data Management Lead. Fancy title that means I maintain an internal R package that serves as an intermediary between a team of volunteers, Data Hunters, and the \{openintro\} and \{usdata\} R packages. The Data Hunters compile and cultivate real world data sets for inclusion in the textbook and supplmentary materials. If you're interested in becoming a Data Hunter, please [email me!](mailto:nick@openintro.org)
+
+# Runner 
+In another life, I was a retail store manager at a local Fleet Feet. I spent years running 50+ miles per week and competing in races ranging from 5k's to 100 miles (* only one of those). At one point I was even a member of (now defunct) PowerBar TeamElite. I still run but I'm not so fast anymore.
