@@ -1,13 +1,11 @@
 ---
 title: "A small start"
-description: |
-  Musings of an academic without a PhD.
 author:
   - name: Nick Paterno 
     url: https://github.com/npaterno #replace this with github pages link
     affiliation: Pacific Lutheran University
     affiliation_url: https://plu.edu
-date: "`r Sys.Date()`"
+date: "3/29/2021"
 output:
   distill::distill_article:
     self_contained: false

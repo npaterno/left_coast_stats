@@ -7,10 +7,12 @@ navbar:
   #logo:
     #image: lsc.PNG
   right:
-    - text: "Home"
-      href: index.html
     - text: "About Me"
       href: about.html
+    - text: "Blog"
+      href: index.html
+    - text: "Rtistry"
+      href: art.html
     - text: "Stat 242" 
       href: two_four_two.html
     #- text: "Math 253"

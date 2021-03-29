@@ -1,5 +1,5 @@
 ---
-title: "Left Coast Statistician"
+title: "Posts"
 site: distill::distill_website
 listing: posts
 ---
