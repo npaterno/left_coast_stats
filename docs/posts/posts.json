@@ -2,7 +2,7 @@
   {
     "path": "posts/welcome/",
     "title": "A small start",
-    "description": "Musings of an academic without a PhD.",
+    "description": {},
     "author": [
       {
         "name": "Nick Paterno",
@@ -13,7 +13,7 @@
     "categories": [],
     "contents": "\r\nEventually, this site will be used as a personal blog and to host materials for a few classes I teach.\r\nFor now, just a small start. A place to write about my experiences as an acadamic without a PhD. Spoiler alert: imposter syndrome is real.\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-03-29T13:22:21-07:00",
+    "last_modified": "2021-03-29T13:48:33-07:00",
     "input_file": {}
   }
 ]

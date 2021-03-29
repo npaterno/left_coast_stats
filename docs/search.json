@@ -5,15 +5,23 @@
       "title": "About Me",
       "description": "Musings of an academic without a PhD.",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-03-29T13:22:37-07:00"
+      "contents": "\r\nAcademic\r\nBA, Mathematics, University of Montana, 2009\r\nMSc, Mathematics, Portland State University, 2011\r\nBy profession I’m an academic. I started my career in January 2012. I’ve been a contingent faculty member the entire time. I currently teach as an adjunct associate professor at Pierce College and as a visiting instructor at Pacific Lutheran University.\r\nAside from teaching but still under the academic umbrella, I am a contributor with OpenIntro. Specifically I serve as the Data Management Lead. Fancy title that means I maintain an internal R package that serves as an intermediary between a team of volunteers, Data Hunters, and the {openintro} and {usdata} R packages. The Data Hunters compile and cultivate real world data sets for inclusion in the textbook and supplmentary materials. If you’re interested in becoming a Data Hunter, please email me!\r\nRunner\r\nIn another life, I was a retail store manager at a local Fleet Feet. I spent years running 50+ miles per week and competing in races ranging from 5k’s to 100 miles (* only one of those). At one point I was even a member of (now defunct) PowerBar TeamElite. I still run but I’m not so fast anymore.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-03-29T14:49:45-07:00"
+    },
+    {
+      "path": "art.html",
+      "title": "Rtistry",
+      "description": "Generative art created in R",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-03-29T14:50:14-07:00"
     },
     {
       "path": "index.html",
-      "title": "Left Coast Statistician",
+      "title": "Posts",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-03-29T13:22:38-07:00"
+      "last_modified": "2021-03-29T14:50:15-07:00"
     },
     {
       "path": "two_four_two.html",
@@ -21,7 +29,7 @@
       "description": "Course materials for Math/Stat 242",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-03-29T13:22:39-07:00"
+      "last_modified": "2021-03-29T14:50:15-07:00"
     }
   ],
   "collections": ["posts/posts.json"]
