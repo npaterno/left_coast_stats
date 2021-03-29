@@ -1,0 +1,21 @@
+---
+title: "Rtistry"
+description: | 
+  Generative art created in R
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r, echo = FALSE}
+seq(-4, 4, by = 0.02) %>% 
+  expand.grid(x = ., y = .) %>% 
+  ggplot()+
+  geom_point(mapping = aes(x = (1+abs(y)-sin(x^2)), y = 1-x+cos(y^2)),
+             alpha = 0.05, shape = 20, size = 1, color = "red")+
+  theme_void()+
+  coord_polar()
+```
+
