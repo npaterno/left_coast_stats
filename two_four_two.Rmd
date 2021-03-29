@@ -1,0 +1,9 @@
+---
+title: "Stat 242"
+description: | 
+  Course materials for Math/Stat 242
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```

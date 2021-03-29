@@ -4,9 +4,21 @@ description: |
   Left Coast Statistician
 output_dir: "docs"
 navbar:
+  #logo:
+    #image: lsc.PNG
   right:
     - text: "Home"
       href: index.html
-    - text: "About"
+    - text: "About Me"
       href: about.html
+    - text: "Stat 242" 
+      href: two_four_two.html
+    #- text: "Math 253"
+    #  href: two_five_three.html
+    - icon: fab fa-twitter fa-lg
+      href: https://twitter.com/Mathl3t3
+    - icon: fab fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/npaterno/
+    - icon: fab fa-github fa-lg
+      href: https://github.com/npaterno
 output: distill::distill_article

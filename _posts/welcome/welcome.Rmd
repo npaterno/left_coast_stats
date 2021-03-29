@@ -1,14 +1,13 @@
 ---
-title: "Welcome to Left Coast Statistician"
+title: "A small start"
 description: |
-  Welcome to our new blog, Left Coast Statistician. We hope you enjoy 
-  reading what we have to say!
+  Musings of an academic without a PhD.
 author:
-  - name: Nora Jones 
-    url: https://example.com/norajones
-    affiliation: Spacely Sprockets
-    affiliation_url: https://example.com/spacelysprokets
-date: 03-29-2021
+  - name: Nick Paterno 
+    url: https://github.com/npaterno #replace this with github pages link
+    affiliation: Pacific Lutheran University
+    affiliation_url: https://plu.edu
+date: "`r Sys.Date()`"
 output:
   distill::distill_article:
     self_contained: false
@@ -22,5 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+Eventually, this site will be used as a personal blog and to host materials for a few classes I teach. 
 
+For now, just a small start. A place to write about my experiences as an acadamic without a PhD. Spoiler alert: imposter syndrome is real. 
 
