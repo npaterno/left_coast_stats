@@ -1,0 +1,5 @@
+---
+title: "Left Coast Statistician"
+site: distill::distill_website
+listing: posts
+---

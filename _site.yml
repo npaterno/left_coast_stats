@@ -1,0 +1,12 @@
+name: "left_coast_statistician"
+title: "Left Coast Statistician"
+description: |
+  Left Coast Statistician
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article
