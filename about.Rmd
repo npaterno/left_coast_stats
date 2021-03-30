@@ -14,7 +14,41 @@ knitr::opts_chunk$set(echo = FALSE)
 
 By profession I'm an academic. I started my career in January 2012. I've been a contingent faculty member the entire time. I currently teach as an adjunct associate professor at [Pierce College](https://pierce.ctc.edu) and as a visiting instructor at [Pacific Lutheran University](https://www.plu.edu). 
 
-Aside from teaching but still under the academic umbrella, I am a contributor with [OpenIntro](https://www.openintro.org). Specifically I serve as the Data Management Lead. Fancy title that means I maintain an internal R package that serves as an intermediary between a team of volunteers, Data Hunters, and the \{openintro\} and \{usdata\} R packages. The Data Hunters compile and cultivate real world data sets for inclusion in the textbook and supplmentary materials. If you're interested in becoming a Data Hunter, please [email me!](mailto:nick@openintro.org)
+Aside from teaching but still under the academic umbrella, I am a contributor with [OpenIntro](https://www.openintro.org). Specifically I serve as the Data Management Lead. Fancy title that means I maintain an internal R package that serves as an intermediary between a team of volunteers, Data Hunters, and the \{openintro\} and \{usdata\} R packages. The Data Hunters compile and cultivate real world data sets for inclusion in the textbook and supplementary materials. If you're interested in becoming a Data Hunter, please [email me!](mailto:nick@openintro.org)
 
 # Runner 
 In another life, I was a retail store manager at a local Fleet Feet. I spent years running 50+ miles per week and competing in races ranging from 5k's to 100 miles (* only one of those). At one point I was even a member of (now defunct) PowerBar TeamElite. I still run but I'm not so fast anymore.
+
+# Tech Enthusiast 
+I have always enjoyed technology. I like to tinker and to keep things running as long as I can. I just recently had to replace my laptop after 8 years and am typing this on a 10 year old desktop. 
+
+## Current Setup(s)
+
+### Laptop
+* Dell G3 3590
+* CPU: Intel Core i7-9750h
+* Memory: 16 GB DDR4-2666 
+* Storage (boot): 500 GB Samsung 970 EVO m.2 nvme ssd
+* Storage: 1 TB Seagate hdd
+* WiFi: 802.11ax
+* Graphics: Nvidia GeForce GTX 1650
+
+### Desktop
+* Dell XPS 8300
+* CPU: Intel Core i7-2600
+* CPU Cooler: Thermaltake Gravity i2
+* Memory: 32 GB DDR3-1333
+* Storage (boot): 240 GB Seagate BarraCuda ssd
+* Storage: 500 GB WD Blue hdd
+* WiFi: 802.11n
+* Graphics: Nvidia GT 710
+
+### Peripherals
+* Keyboard: Keychron K4
+* Keyboard: Keychron K6
+* Mouse: Corsair Harpoon
+* Monitors: 2 x Dell 27"
+
+### NAS
+* Synology DS 220j
+* 2 x 4 TB Seagate Ironwolf (raid 1)
