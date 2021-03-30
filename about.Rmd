@@ -8,6 +8,8 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+![](images/profile.jpg)
+
 # Academic 
 * BA, Mathematics, University of Montana, 2009
 * MSc, Mathematics, Portland State University, 2011
