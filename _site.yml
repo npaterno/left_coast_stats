@@ -4,8 +4,6 @@ description: |
   Left Coast Statistician
 output_dir: "docs"
 navbar:
-  #logo:
-    #image: lsc.PNG
   right:
     - text: "About Me"
       href: about.html
