@@ -1,0 +1,32 @@
+---
+title: "Stat 231"
+description: | 
+  Course materials for Stat 231
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Stat 231: Introductory Statistics
+
+This course is intended for non-STEM majors.
+
+An emphasis is placed on a broad understanding of topics in sampling methods, basic probability, hypothesis testing, confidence intervals and linear regression.
+
+# Course Materials
+
+Our textbook is [OpenIntro Statistics: 4th Ed.](https://www.openintro.org/book/os).
+
+A graphing calculator will be useful for some of the computations we will do. Specifically instruction will be provided for the Ti-83/84 and Casio FX-750GII. 
+
+We will have a total of seven computer labs using R and RStudio. There will be dedicated class time to installing the software or setting up a cloud account. Those who feel comfortable doing so can download [R](https://cran.r-project.org) and [RStudio](https://www.rstudio.com/download) prior to the start of class.
+
+# R Package 
+All materials needed for lab days can be found in the [stat231](https://www.github.com/npaterno/stat231) R package. Students can install the package by running the code below in the console of RStudio (requires the `devtools` package). As with R and RStudio, there will be dedicated time in class for this activity. 
+
+> devtools::install_github("npaterno/stat231", build_vignettes = TRUE)
+
+Each lesson can be found as a vignette in the help file. The corresponding assignments are available as RMarkdown templates.
+
+If you happen to be an instructor who has stumbled across this page, you are free to use the package under the CC-BY-SA 4.0 License.

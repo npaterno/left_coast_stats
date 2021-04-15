@@ -17,6 +17,8 @@ navbar:
       href: index.html
     - text: "Rtistry"
       href: art.html
+    - text: "Stat 231"
+      href: two_three_one.html
     - text: "Stat 242" 
       href: two_four_two.html
     - icon: fab fa-twitter fa-lg
