@@ -1,0 +1,28 @@
+---
+title: "How it all began"
+author:
+  - name: Nick Paterno
+    url: https://github.com/npaterno #replace this with github pages link
+    affiliation: Pacific Lutheran University
+    affiliation_url: https://plu.edu
+date: "04/28/2021"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+I always said I wanted to be a teacher when I was growing up. My dad was a high school English teacher and debate coach. He seemed to really enjoy his job and I wanted to be like dad. Except, I was better at math. So I thought I'd end up a high school math teacher. 
+
+Fast forward to college/grad school. I got my BA and MS in mathematics and really enjoyed the research and applied mathematics. At this point I had switched my focus from teaching to trying to land a research job. Turns out, at least at the time, there weren't too many of those to go around unless you had a PhD. Six months out from graduation, I was still jobless and my new wife and I were living with her folks. {Side note: super greatful for that since it allowed us to save money for the house we live in now.} I needed to find something. 
+
+I threw my hat in the ring for the "adjunct pool" at a local two-year college. A few days later I had a phone call and was hired in less than a month. I began my teaching career with Precalculus I at 9 am Winter Quarter 2012. The next term I switched to two night sections of Introduction to Statistics. From that point until now I've taught statistics more than any other class. In fact, its a majority of the course I've taught. A quick glance at my teaching history (everyone keeps that in an Excel sheet, right?) - counting what I'm scheduled for this Summer and Fall Terms - I've racked up 53 sections of statistics out of 100 sections total.
+
+One hundred sections spread out over ten years *seems* reasonable. That's ten sections per year, three per quarter plus one summer class. Well, reader, if you read the [About Me](https://npaterno.github.io/left_coast_stats/about.html) page then you know I'm still an adjunct/contingent faculty member. Remember that I applied to teach because I was jobless and living with my in-laws? The one or two classes per quarter I was getting was not enough to change that situation. I applied to be a sales associate at a local Fleet Feet. Less than a year later I was the store manager and spent the next two and a half years in that roll in addition to teaching nights. 
+
+Nearing the end of my tenure at the store, I was insanely stressed out and depressed. I didn't see it too well but my wife certainly noticed a change in my demeanor when all was said and done. All I was cognizant of was that my only path upward at the store was to become an owner. I had to decide if I wanted to start down that road or if I wanted to dedicate my time and effort to the classroom. I was open about that with anyone, even my students. During our break one night - since its crazy difficult to focus on teaching or learning for a two hour class that starts at 8pm - I chatted with a few students about my dilema. I will never forget when one of those students, Theresa, came up to me after class and said "You belong in the classroom." Cheesy as it may sound, it was that night that I knew what my decision was. I put my two weeks notice at the store shortly thereafter. 
+
+With my focus now completely in the classroom, I started teaching as many classes as I could each quarter. I was teaching four classes per quarter plus two in the summer. A total of fourteen courses per academic year. After a few years of this, I applied and was hired for one class for one semester at a local university. Over the next few years, I transitioned to being a full-time contingent faculty member at the U and part-time at the College. My heaviest course load was February/March of this year - the overlap from Winter Quarter at the College and Spring Semester at the U. I had a total of six courses/three preps. I know that this is highly unsustainable. The past year has made that clear. I need more quality time with my wife and our two sons. I sense another transition in my career may be on the horizon, though I'm not sure what it will be (or if its even there).
