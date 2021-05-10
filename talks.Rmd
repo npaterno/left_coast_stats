@@ -1,6 +1,8 @@
 ---
-title: "Untitled"
-author: "N. Paterno"
-date: "5/10/2021"
-output: html_document
+title: "Talks"
+description: | 
+  Slides for Talks
 ---
+
+- Cascadia R Conference, 2021
+-- [slides](https://npaterno.github.io/cascadia_r_2021_talk/#1) {DRAFT}
