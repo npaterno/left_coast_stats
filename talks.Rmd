@@ -5,4 +5,4 @@ description: |
 ---
 
 - Cascadia R Conference, 2021
--- [slides](https://npaterno.github.io/cascadia_r_2021_talk/#1) {DRAFT}
+-- [slides](https://npaterno.github.io/cascadia_r_2021_talk/#1)
