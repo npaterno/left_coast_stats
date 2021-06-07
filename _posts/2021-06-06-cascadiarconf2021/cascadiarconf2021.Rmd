@@ -1,7 +1,7 @@
 ---
 title: "CascadiaRConf::2021"
 description: |
-  What didn't go well, and the speech I intended to give.
+  Accidentally tempting fate and surviving
 author:
   - name: Nick Paterno
     url: https://github.com/npaterno
@@ -24,7 +24,7 @@ I spent a fair amount of time preparing for what was to be my first presentation
 
 Being a virtual conference, I wanted to make sure I had stable internet access. My home office is a bit far from our wireless router and I've had the internet drop out as well as applications like Zoom and Google Meets straight up freeze the entire computer. My solution was to present from my office at the University. This ended up being more of a problem than a solution.
 
-The University had a planned maintenance day for a lot of networking equipment on campus. I had read the notification from IT well before the conference. I saw the main parts - which servers would be down, what software we would lose remote access to, etc. What I missed was that it also stated internet access would be down intermittently throughout the day. 
+The University had a planned maintenance day for a lot of networking equipment on campus. I had read the notification from IT well before the conference. I saw the main parts - which servers would be down, what software we would lose remote access to, etc. What I missed was that it also stated internet access would be down intermittently throughout the day. This is the part where I accidentally tempt fate.
 
 I watched the first half of the conference from home and moved to campus during the lunch break. Everything was going great! I was learning a lot and getting excited/nervous for my talk; I was scheduled to be the last speaker for the day. About an hour before my desktop lost internet access. After panicking for 20 or so minutes, I got my access back. Or so I thought. Things were smooth right up until I was being introduced. My internet access was cut off as the moderator was introducing me! 
 
@@ -32,4 +32,32 @@ Thankfully, access was restored after a few minutes. However, at this point I wa
 
 # Teaching Non-STEM Students to Code
 
+## Attempt Zero
 
+I teach an introductory statistics course through the Economics department. The course is required by students majoring in Economics, Business, Kinesiology and Nursing. It's also an option for students minoring in Data Science. The majority of students in sections that I've taught have been majoring in Business or Nursing. Occasionally there will be students from other majors; I've had a junior Physics major as well as a few Art and Music majors taking the course as an elective. Needless to say, there is a wide range of academic standing and ability among those who take the course. For 99.9% of students, this would be there first exposure to writing code.
+
+The first time I taught the class (Fall semester 2019), I very closely followed another instructors course. I had only taught statistics for the math department prior to this and wanted to make sure I was emphasizing the right parts and giving appropriate examples. I used the same textbook, course structure and even borrowed a few of her assignments. The class has a required computer lab that she had taught in Excel (as did others in the department). I opted to do the same the first time around. However, I knew that students would be exposed to Excel in other courses and there were few courses (only three courses at the time: Mathematical Statistics, Statistical Consulting and Econometrics) where they would be exposed to R. 
+
+I decided to add R instruction as an optional/extra credit topic. After each Excel lab, I gave students the option to leave class early or stick around an learn R. Initially about eight students remained behind (roughly 25% of the class). I went into these sessions with zero prep. I just popped open RStudio and started coding a script file with what we had just done in Excel, explaining my steps along the way. As you might imagine, this did not go so well. By Thanksgiving break in November the entire class opted to leave early and skip the R lesson.
+
+## Attempt One
+
+My first real attempt to teach R, i.e. it was a requirement not optional, was J-Term 2020. J-Term is a four week session between Fall and Spring semesters where students can opt to take one course. It is a very intense session - three hour class sessions four days a week - as we are cramming an entire semester long course into four weeks. During the Holiday break after Fall semester I sat down to do the necessary prep work. I cleaned up the script files from the fall to have more consistent formatting and much better commenting throughout the files. I then created alternate script files that would serve as templates for the assignments. The results were slightly better, but not great. Two evaluations that stick out were "I don't know why we learned coding in a statistics class" and "I liked the coding, but don't see how it was related to statistics". This was more of a course structure issue than it was students not understanding how to code, but it sums up how the term went. 
+
+The one thing that did go well was the actual lab day structure. I spent the first half of class live coding, so they could code along with me. This included installing any necessary packages, loading them with library calls, etc. The second half of class, students worked on the assignment with help from each other and myself. Being able to walk around and help students one-on-one was a huge benefit too. Remember, this is now January 2020 *just* before the pandemic shut things down.
+
+Common and reoccurring issues students had that term were: 
+- not installing packages
+- not loading packages with library calls
+- forgetting to load the data into the assignment file
+- not being able to find the file once it was saved
+
+## Attempt Two
+
+Luckily, I had not been scheduled to teach that class during Spring semester so I had until Fall 2020 to make changes. Our University made it to the end of March before deciding to switch to remote; students went home for Spring Break and didn't return to campus. While I had initially just planned on adjusting the lessons and file structure, now I had to also adjust for teaching this virtually. 
+
+For the lessons and assignments, I moved everything over to RMarkdown. To help with the file structure I made a Stat231Labs folder that students were instructed to download and save either on their Desktop or in the Documents folder. That way, everyone would have the same/similar file paths and everyone could find the files. Once it was saved, I showed them how to set that folder as the default working directory for RStudio. Inside that file were two folders: Lessons and Assignments. The Lessons folder contained the html output from the RMarkdown version of the cleaned up script files from J-Term. The assignments folder had RMarkdown templates for the assignments.
+
+Since the actual lab day structure worked well before, I wanted to keep it as best I could in the virtual setting. I still did live coding the first half of the Zoom session. The second half students worked together in breakout rooms. This worked *fairly* well, but still had its flaws. If one student had an error or other problem, it took a lot longer for them to share their screen and for me to squint at their code to see that, oh, "we just need to add 'library(ggplot2)' to the beginning of your file" than it took me to do the same thing in person.
+
+Evaluations were better this time around. I'm sure there were some good and some bad, but none that stuck out to me like the two from J-Term. But still, students had the same issues: not installing or loading packages, forgetting to load the data and trouble finding the files. 
