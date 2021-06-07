@@ -5,6 +5,6 @@ description: |
 ---
 
 # Cascadia R Conference, 2021
-## Teaching Non-STEM Student to Code
-* [blog post](https://npaterno.github.io/left_coast_stats/posts/2021-06-07-cascadiarconf2021/)
-* [slides](https://npaterno.github.io/cascadia_r_2021_talk/#1)
+-Teaching Non-STEM Student to Code
+-- [blog post](https://npaterno.github.io/left_coast_stats/posts/2021-06-07-cascadiarconf2021/)
+-- [slides](https://npaterno.github.io/cascadia_r_2021_talk/#1)
