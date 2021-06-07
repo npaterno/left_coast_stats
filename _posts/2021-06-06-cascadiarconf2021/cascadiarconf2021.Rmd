@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Preparing for and *just* getting by at CascadiaRConf
 
-Yesterday was the Cascadia R Conference, a regional R conference for the Pacific Northwest. A few months back I made a proposal to give a talk on teaching non-stem students to code. Something I've done almost every term for the last two years. In the grand scheme of things that's not really a long time, but I felt it was enough to share what I have learned. Luckily, the conference organizers felt the same and my proposal was accepted. 
+This past Saturday was the Cascadia R Conference, a regional R conference for the Pacific Northwest. A few months back I made a proposal to give a talk on teaching non-stem students to code. Something I've done almost every term for the last two years. In the grand scheme of things that's not really a long time, but I felt it was enough to share what I have learned. Luckily, the conference organizers felt the same and my proposal was accepted. 
 
 I spent a fair amount of time preparing for what was to be my first presentation at a conference. I made my first slide deck using {Xaringan}. Practiced repeatedly and was more than ready. 
 
@@ -28,7 +28,7 @@ The University had a planned maintenance day for a lot of networking equipment o
 
 I watched the first half of the conference from home and moved to campus during the lunch break. Everything was going great! I was learning a lot and getting excited/nervous for my talk; I was scheduled to be the last speaker for the day. About an hour before my desktop lost internet access. After panicking for 20 or so minutes, I got my access back. Or so I thought. Things were smooth right up until I was being introduced. My internet access was cut off as the moderator was introducing me! 
 
-Thankfully, access was restored after a few minutes. However, at this point I was flustered and definitely thrown off. If you attended the conference you already know this. Several people told me I recovered well but I'm still disappointed with the speech I gave. What follows is the talk I had intended to give. 
+Thankfully, access was restored after a few minutes. However, at this point I was flustered and definitely thrown off. If you attended the conference you already know this. Several people told me I recovered well but I'm still disappointed with the speech I gave. What follows is the talk I had intended to give, plus a few more details. 
 
 # Teaching Non-STEM Students to Code
 
@@ -38,19 +38,22 @@ I teach an introductory statistics course through the Economics department. The 
 
 The first time I taught the class (Fall semester 2019), I very closely followed another instructors course. I had only taught statistics for the math department prior to this and wanted to make sure I was emphasizing the right parts and giving appropriate examples. I used the same textbook, course structure and even borrowed a few of her assignments. The class has a required computer lab that she had taught in Excel (as did others in the department). I opted to do the same the first time around. However, I knew that students would be exposed to Excel in other courses and there were few courses (only three courses at the time: Mathematical Statistics, Statistical Consulting and Econometrics) where they would be exposed to R. 
 
-I decided to add R instruction as an optional/extra credit topic. After each Excel lab, I gave students the option to leave class early or stick around an learn R. Initially about eight students remained behind (roughly 25% of the class). I went into these sessions with zero prep. I just popped open RStudio and started coding a script file with what we had just done in Excel, explaining my steps along the way. As you might imagine, this did not go so well. By Thanksgiving break in November the entire class opted to leave early and skip the R lesson.
+I decided to add R instruction as an optional/extra credit topic. After each Excel lab, I gave students the option to leave class early or stick around an learn R. Initially about eight students remained behind (roughly 25% of the class). I went into these sessions with zero prep. I just popped open RStudio and started coding a script file with what we had just done in Excel, explaining my steps along the way. This included some base R, some {tidyverse}. The base R was things like data types, data structures, lists, etc. To a group of people who hadn't seen or written code before...you can imagine this did not go so well. By Thanksgiving break in November the entire class opted to leave early and skip the R lesson.
 
 ## Attempt One
 
-My first real attempt to teach R, i.e. it was a requirement not optional, was J-Term 2020. J-Term is a four week session between Fall and Spring semesters where students can opt to take one course. It is a very intense session - three hour class sessions four days a week - as we are cramming an entire semester long course into four weeks. During the Holiday break after Fall semester I sat down to do the necessary prep work. I cleaned up the script files from the fall to have more consistent formatting and much better commenting throughout the files. I then created alternate script files that would serve as templates for the assignments. The results were slightly better, but not great. Two evaluations that stick out were "I don't know why we learned coding in a statistics class" and "I liked the coding, but don't see how it was related to statistics". This was more of a course structure issue than it was students not understanding how to code, but it sums up how the term went. 
+My first real attempt to teach R, i.e. it was a requirement not optional, was J-Term 2020. J-Term is a four week session between Fall and Spring semesters where students can opt to take one course. It is a very intense session - three hour class sessions four days a week - as we are cramming an entire semester long course into four weeks. During the Holiday break after Fall semester I sat down to do the necessary prep work. I cleaned up the script files from the fall to have more consistent formatting, much better commenting throughout and I removed much of the nitty gritty base R from the files. It was at this point that I realized these students were more likely to use R as a tool and didn't necessarily need a deep understanding of the entire language. 
+
+I then created alternate script files that would serve as templates for the assignments. The results were slightly better, but not great. Two evaluations that stick out were "I don't know why we learned coding in a statistics class" and "I liked the coding, but don't see how it was related to statistics". This was more of a course structure issue than it was students not understanding how to code, but it sums up how the term went. 
 
 The one thing that did go well was the actual lab day structure. I spent the first half of class live coding, so they could code along with me. This included installing any necessary packages, loading them with library calls, etc. The second half of class, students worked on the assignment with help from each other and myself. Being able to walk around and help students one-on-one was a huge benefit too. Remember, this is now January 2020 *just* before the pandemic shut things down.
 
-Common and reoccurring issues students had that term were: 
-- not installing packages
-- not loading packages with library calls
-- forgetting to load the data into the assignment file
-- not being able to find the file once it was saved
+Common and reoccurring issues students had that term were:
+
+* not installing packages
+* not loading packages with library calls
+* forgetting to load the data into the assignment file
+* not being able to find the file once it was saved
 
 ## Attempt Two
 
@@ -61,3 +64,27 @@ For the lessons and assignments, I moved everything over to RMarkdown. To help w
 Since the actual lab day structure worked well before, I wanted to keep it as best I could in the virtual setting. I still did live coding the first half of the Zoom session. The second half students worked together in breakout rooms. This worked *fairly* well, but still had its flaws. If one student had an error or other problem, it took a lot longer for them to share their screen and for me to squint at their code to see that, oh, "we just need to add 'library(ggplot2)' to the beginning of your file" than it took me to do the same thing in person.
 
 Evaluations were better this time around. I'm sure there were some good and some bad, but none that stuck out to me like the two from J-Term. But still, students had the same issues: not installing or loading packages, forgetting to load the data and trouble finding the files. 
+
+## Third Times a Charm
+
+During J-Term, I flipped the script once again. I decided the best way to teach non-STEM students to code was to automate/streamline as much as possible, then give necessary details as they come up. To accomplish this I compiled all of the materials for the course into an R package: [Stat231](https://github.com/npaterno/stat231). This solve most of the problems, but not all. 
+
+For the type of student who didn't pay close attention and missed when we installed a new package, I listed all necessary packages as "dependencies" so that they will automatically install with the course package. They only had to install {devtools} and then use:
+
+```{r, eval = FALSE, echo = TRUE}
+ devtools::install_github("npaterno/stat231", build_vignettes = TRUE)
+```
+
+to install the course package. This is the first part of automation/streamlining that was explained as we were installing the course package. Basically the entire first day of lab. We first installed R and RStudio, got acquainted with the layout and then installed the course package. Once that was complete, we went over the lessons and assignments. 
+
+Lessons were translated into package vignettes. This allowed students to access them via the help file in RStudio and code along without having to toggle between RStudio and their web browser.
+
+Assignments were morphed into RMarkdown templates that students could access using the usual "New File -> R Markdown -> From Template". The yaml header was set up to knit to html and students only needed to fill in the date and their name. I didn't go into much detail other than "Save the file in a place you'll remember like your Documents or Desktop. Then click the little ball of yarn that says 'knit' or press control-shift-k to knit your assignment. Then you'll submit the resulting html file". To solve the loading packages problem, I wrote those lines of code directly into the setup code chunk of the template so it was already there. This is part of the automated/streamlining that was explained as we got to it.
+
+The results exceeded any expectations I had. Since a lot of the finer details were streamlined, students could focus on using R as a tool. They didn't need to 'fight' to make RStudio work. This shift in focus allowed them to dig into help files for packages and do more research on functions not taught in class that could be helpful. 
+
+I saw tangible evidence of this when students knitted their markdown files to doc or pdf files; the latter impressed me a bit more as that means they also installed tinytex - which means they learned how to install packages after it was explained! My favorite proof-of-concept that this strategy works came with their final. They were given a histogram of income from the *census* dataset in the {openintro} package which, among other things, used *theme_fivethirtyeight()* from {ggthemes}. The problem was to recreate the graph, given the dataset and that it used a theme from {ggthemes}. Two or three students actually created *theme_fivethirtyeight()* from scratch by altering individual *theme()* elements!
+
+## Reflecting
+
+Now that Spring semester is complete and I've had a bit of time to reflect on everything above, I'm happy with the results. Is it perfect? No. Will it work for everyone? Also no. The main persisting issue is students having trouble saving/locating files (I sense the {here} package will be making an appearance in the next iteration of the package). Even so, I am confident that the best way to teach non-STEM students to write code is to teach it as a tool - whether its R, Python or something else - and to automate/streamline what you can and then explain what was automated and how it improved their workflow.
