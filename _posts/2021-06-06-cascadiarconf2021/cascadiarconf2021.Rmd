@@ -1,0 +1,35 @@
+---
+title: "CascadiaRConf::2021"
+description: |
+  What didn't go well, and the speech I intended to give.
+author:
+  - name: Nick Paterno
+    url: https://github.com/npaterno
+date: 06-06-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Preparing for and *just* getting by at CascadiaRConf
+
+Yesterday was the Cascadia R Conference, a regional R conference for the Pacific Northwest. A few months back I made a proposal to give a talk on teaching non-stem students to code. Something I've done almost every term for the last two years. In the grand scheme of things that's not really a long time, but I felt it was enough to share what I have learned. Luckily, the conference organizers felt the same and my proposal was accepted. 
+
+I spent a fair amount of time preparing for what was to be my first presentation at a conference. I made my first slide deck using {Xaringan}. Practiced repeatedly and was more than ready. 
+
+Being a virtual conference, I wanted to make sure I had stable internet access. My home office is a bit far from our wireless router and I've had the internet drop out as well as applications like Zoom and Google Meets straight up freeze the entire computer. My solution was to present from my office at the University. This ended up being more of a problem than a solution.
+
+The University had a planned maintenance day for a lot of networking equipment on campus. I had read the notification from IT well before the conference. I saw the main parts - which servers would be down, what software we would lose remote access to, etc. What I missed was that it also stated internet access would be down intermittently throughout the day. 
+
+I watched the first half of the conference from home and moved to campus during the lunch break. Everything was going great! I was learning a lot and getting excited/nervous for my talk; I was scheduled to be the last speaker for the day. About an hour before my desktop lost internet access. After panicking for 20 or so minutes, I got my access back. Or so I thought. Things were smooth right up until I was being introduced. My internet access was cut off as the moderator was introducing me! 
+
+Thankfully, access was restored after a few minutes. However, at this point I was flustered and definitely thrown off. If you attended the conference you already know this. Several people told me I recovered well but I'm still disappointed with the speech I gave. What follows is the talk I had intended to give. 
+
+# Teaching Non-STEM Students to Code
+
+
