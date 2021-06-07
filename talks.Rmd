@@ -5,4 +5,5 @@ description: |
 ---
 
 - Cascadia R Conference, 2021
+- Teaching Non-STEM Student to Code
 -- [slides](https://npaterno.github.io/cascadia_r_2021_talk/#1)
