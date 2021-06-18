@@ -29,7 +29,7 @@ I have always enjoyed technology. I like to tinker and to keep things running as
 ### Laptop
 * Dell G3 3590
 * CPU: Intel Core i7-9750h
-* Memory: 16 GB DDR4-2666 
+* Memory: 32 GB Crucial Ballistix DDR4-2666 
 * Storage (boot): 500 GB Samsung 970 EVO m.2 nvme ssd
 * Storage: 1 TB Seagate hdd
 * WiFi: 802.11ax
