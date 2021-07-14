@@ -1,0 +1,30 @@
+/* Styling sheet for personal site */
+/* colors: #34FBED, #21A4B9, #FCD834 */
+
+h2{
+  text-align: center;
+  text-size: 30px;
+  background: #34FBED;
+  width: 100%;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h3{
+  text-align: center;
+  text-size: 15px;
+  background: #21A4B9;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h4{
+  text-align: center;
+  text-size: 10px;
+  background: #FCD834;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

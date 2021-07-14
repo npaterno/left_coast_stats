@@ -5,13 +5,13 @@ description: |
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(flametree)
 ```
 
-## Miscellaneous Art
-```{r, echo = FALSE}
+### Miscellaneous Art
+```{r}
 seq(-4, 4, by = 0.02) %>% 
   expand.grid(x = ., y = .) %>% 
   ggplot()+
@@ -21,10 +21,10 @@ seq(-4, 4, by = 0.02) %>%
   coord_polar()
 ```
 
-## [{flametree}](https://flametree.djnavarro.net/index.html)
+### [{flametree}](https://flametree.djnavarro.net/index.html)
 An R package for generative art by [djnavarro](https://djnavarro.net)
 
-```{r, echo = FALSE}
+```{r}
 flametree_grow(
   time = 8,
   trees = 6,
@@ -37,7 +37,7 @@ flametree_grow(
     )
 ```
 
-```{r, echo = FALSE}
+```{r}
 flametree_grow(seed = 213, 
                time = 10, 
                scale = c(0.5, 1.5),
@@ -50,5 +50,25 @@ flametree_grow(seed = 213,
                 "cyan",
                 "darkslateblue")
 ) 
+```
+
+```{r}
+plot <- flametree_grow(seed = 213, 
+                       time = 6, 
+                       scale = c(0.25, 0.50, 0.75, 1.0, 1.5),
+                       angle = c(-30, -15, 10, 20),
+                       split = 3,
+                       trees = 4,
+                       shift_x = spark_linear(tree = 4),
+                       shift_y = spark_linear(tree = 3)
+) %>% 
+  flametree_plot(
+    palette = c("cadetblue",
+                "blue",
+                "cyan",
+                "darkslateblue")
+  )
+
+plot+coord_polar()
 ```
 

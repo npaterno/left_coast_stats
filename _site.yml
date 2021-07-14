@@ -2,7 +2,7 @@ name: "."
 title: "Left Coast Statistician"
 description: ""
 output_dir: "docs"
-#theme: theme.css 
+theme: theme.css 
 #WRITE CSS FILE FOR SITE
 #base_url: https://blog.npaterno.net 
 #CHANGE URL ON GITHUB AFTER CASCADIA R

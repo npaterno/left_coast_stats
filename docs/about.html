@@ -2032,8 +2032,270 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </script>
 
+  <style type="text/css">
+  /* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+
+
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --header-color:    rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(0, 0, 0, 0.8);
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    sans-serif;
+    --mono-font:       monospace;
+    --body-font:       sans-serif;
+    --navbar-font:     sans-serif;  /* websites + blogs only */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+  </style>
+  <style type="text/css">/* Styling sheet for personal site */
+  /* colors: #34FBED, #21A4B9, #FCD834 */
+
+  h2{
+    text-align: center;
+    text-size: 30px;
+    background: #34FBED;
+    width: 100%;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  h3{
+    text-align: center;
+    text-size: 15px;
+    background: #21A4B9;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  h4{
+    text-align: center;
+    text-size: 10px;
+    background: #FCD834;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }</style>
+  <style type="text/css">
+  /* base style */
+
+  /* FONT FAMILIES */
+
+  :root {
+    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body,
+  .posts-list .post-preview p,
+  .posts-list .description p {
+    font-family: var(--body-font), var(--body-default);
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .posts-list .post-preview h2,
+  .posts-list .description h2 {
+    font-family: var(--heading-font), var(--heading-default);
+  }
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: var(--mono-font), var(--mono-default);
+  }
+
+
+  /*-- TITLE --*/
+  d-title h1,
+  .posts-list > h1 {
+    color: var(--title-color, black);
+  }
+
+  d-title h1 {
+    font-size: var(--title-size, 50px);
+  }
+
+  /*-- HEADERS --*/
+  d-article h1,
+  d-article h2,
+  d-article h3,
+  d-article h4,
+  d-article h5,
+  d-article h6 {
+    color: var(--header-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- BODY --*/
+  d-article > p,  /* only text inside of <p> tags */
+  d-article > ul, /* lists */
+  d-article > ol {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+    font-size: var(--body-size, 1.06rem);
+  }
+
+
+  /*-- CODE --*/
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-size: var(--code-size, 14px);
+  }
+
+  /*-- ASIDE --*/
+  d-article aside {
+    font-size: var(--aside-size, 12px);
+    color: var(--aside-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- FIGURE CAPTIONS --*/
+  figure .caption,
+  figure figcaption,
+  .figure .caption {
+    font-size: var(--fig-cap-size, 13px);
+    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- METADATA --*/
+  d-byline h3 {
+    font-size: var(--heading-size, 0.6rem);
+    color: var(--heading-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-byline {
+    font-size: var(--body-size, 0.8rem);
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  d-byline a,
+  d-article d-byline a {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- TABLE OF CONTENTS --*/
+  .d-contents nav h3 {
+    font-size: var(--heading-size, 18px);
+  }
+
+  .d-contents nav a {
+    font-size: var(--contents-size, 13px);
+  }
+
+  /*-- APPENDIX --*/
+  d-appendix h3 {
+    font-size: var(--heading-size, 15px);
+    color: var(--heading-color, rgba(0, 0, 0, 0.65));
+  }
+
+  d-appendix {
+    font-size: var(--text-size, 0.8em);
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-appendix d-footnote-list a.footnote-backlink {
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  .distill-site-header .title {
+    font-size: var(--title-size, 18px);
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .distill-site-header a,
+  .nav-dropdown .nav-dropbtn {
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    font-size: var(--text-size, 15px);
+  }
+
+  .distill-site-header a:hover,
+  .nav-dropdown:hover .nav-dropbtn {
+    color: var(--hover-color, white);
+  }
+
+  .distill-site-header {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer a:hover {
+    color: var(--hover-color, white);
+  }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2101,19 +2363,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <p><img src="images/profile.jpg" /></p>
-<h1 id="academic">Academic</h1>
+<h2 id="academic">Academic</h2>
 <ul>
 <li>BA, Mathematics, University of Montana, 2009</li>
 <li>MSc, Mathematics, Portland State University, 2011</li>
 </ul>
 <p>By profession I’m an academic. I started my career in January 2012. I’ve been a contingent faculty member the entire time. I currently teach as an adjunct associate professor at <a href="https://pierce.ctc.edu">Pierce College</a> and as a visiting instructor at <a href="https://www.plu.edu">Pacific Lutheran University</a>.</p>
 <p>Aside from teaching but still under the academic umbrella, I am a contributor with <a href="https://www.openintro.org">OpenIntro</a>. Specifically I serve as the Data Management Lead. Fancy title that means I maintain an internal R package that serves as an intermediary between a team of volunteers, Data Hunters, and the {openintro} and {usdata} R packages. The Data Hunters compile and cultivate real world data sets for inclusion in the textbook and supplementary materials. If you’re interested in becoming a Data Hunter, please <a href="mailto:nick@openintro.org">email me!</a></p>
-<h1 id="runner">Runner</h1>
+<h2 id="runner">Runner</h2>
 <p>In another life, I was a retail store manager at a local Fleet Feet. I spent years running 50+ miles per week and competing in races ranging from 5k’s to 100 miles (* only one of those). At one point I was even a member of (now defunct) PowerBar TeamElite. I still run but I’m not so fast anymore.</p>
-<h1 id="tech-enthusiast">Tech Enthusiast</h1>
+<h2 id="tech-enthusiast">Tech Enthusiast</h2>
 <p>I have always enjoyed technology. I like to tinker and to keep things running as long as I can. I just recently had to replace my laptop after 8 years and am typing this on a 10 year old desktop.</p>
-<h2 id="current-setups">Current Setup(s)</h2>
-<h3 id="laptop">Laptop</h3>
+<h3 id="current-setups">Current Setup(s)</h3>
+<h4 id="laptop">Laptop</h4>
 <ul>
 <li>Dell G3 3590</li>
 <li>CPU: Intel Core i7-9750h</li>
@@ -2123,7 +2385,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>WiFi: 802.11ax</li>
 <li>Graphics: Nvidia GeForce GTX 1650</li>
 </ul>
-<h3 id="desktop">Desktop</h3>
+<h4 id="desktop">Desktop</h4>
 <ul>
 <li>Dell XPS 8300</li>
 <li>CPU: Intel Core i7-2600</li>
@@ -2134,14 +2396,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>WiFi: 802.11n</li>
 <li>Graphics: Nvidia GT 710</li>
 </ul>
-<h3 id="peripherals">Peripherals</h3>
+<h4 id="peripherals">Peripherals</h4>
 <ul>
 <li>Keyboard: Keychron K4</li>
 <li>Keyboard: Keychron K6</li>
 <li>Mouse: Corsair Harpoon</li>
 <li>Monitors: 2 x Dell 27"</li>
 </ul>
-<h3 id="nas">NAS</h3>
+<h4 id="nas">NAS</h4>
 <ul>
 <li>Synology DS 220j</li>
 <li>2 x 4 TB Seagate Ironwolf (raid 1)</li>
