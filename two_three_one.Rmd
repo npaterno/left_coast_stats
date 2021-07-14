@@ -1,5 +1,5 @@
 ---
-title: "Stat 231"
+title: "Stat 231: Introductory Statistics"
 description: | 
   Course materials for Stat 231
 ---
@@ -8,11 +8,9 @@ description: |
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Stat 231: Introductory Statistics
+# Course Goals
 
-This course is intended for non-STEM majors.
-
-An emphasis is placed on a broad understanding of topics in sampling methods, basic probability, hypothesis testing, confidence intervals and linear regression.
+This is a first course in statistics designed for non-STEM majors. An emphasis is placed on a broad understanding of topics in sampling methods, basic probability, hypothesis testing, confidence intervals and linear regression. Studens will also be introduced to statistical computing.
 
 # Course Materials
 

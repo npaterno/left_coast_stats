@@ -1,5 +1,5 @@
 ---
-title: "Stat 242"
+title: "Stat 242: Introduction to Mathematical Statistics"
 description: | 
   Course materials for Math/Stat 242
 ---
@@ -8,4 +8,29 @@ description: |
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This page will be in development Summer 2021 to serve as a course hub for fall semester.
+# Course Goals
+*(Largely adapted from my collegue [Dr. Justice](https://sites.google.com/plu.edu/njustice/courses/stat-242?authuser=0))*
+
+By the end of this course, students will be able to navigate data-based claims that permeate our society and develop expertise to make informed data-based decisions. More specifically, students will:
+
+* Gain insight into the statistical process as they execute a basic statistical study
+
+* Develop expertise interpreting and critiquing a statistical study
+
+* Understand the basics and importance of statistical computing
+
+# Course Materials
+
+Our textbook is [Introduction to Modern Statistics 1st Ed.](https://openintro-ims.netlify.app/index.html).
+
+We will have a total of *n* computer labs using R and RStudio. There will be dedicated class time to installing the software or setting up a cloud account. Those who feel comfortable doing so can download [R](https://cran.r-project.org) and [RStudio](https://www.rstudio.com/download) prior to the start of class.
+
+# R Package 
+All materials needed for lab days can be found in the [stat242](https://www.github.com/npaterno/stat242) R package (*package under construction as of 7/14/21*). Students can install the package by running the code below in the console of RStudio (requires the `remotes`` package). As with R and RStudio, there will be dedicated time in class for this activity. 
+
+> install.packages("remotes")
+> remotes::install_github("npaterno/stat242", build_vignettes = TRUE)
+
+Each lesson can be found as a vignette in the help file or as a [slidedeck](https://npaterno.github.io/left_coast_stats/slides). The corresponding assignments are available as RMarkdown templates.
+
+If you happen to be an instructor who has stumbled across this page, you are free to use the package under the CC-BY-SA 4.0 License.
