@@ -2,11 +2,55 @@
 title: "Slides"
 description: | 
   Slidedecks for courses at PLU
+output:
+  html_document:
+    includes:
+      in_header: bs4_header.html
 ---
+```{r, echo = FALSE}
+library(bs4cards)
 
-## Math/Stat 242
+#card(
+#  title = "",
+#  image = "",
+#  text = "",
+#  link = "",
+#  header = ""
+#)
 
-### Getting Started with R and RStudio
+#kitty_list <- list(
+#  sample_card(), sample_card(), sample_card(), sample_card(),
+#  sample_card(), sample_card(), sample_card(), sample_card()
+#)
 
-### Project Based Workflow
+#card_grid(kitty_list)
 
+```
+
+```{r, echo = FALSE}
+two_fourty_two_list <- list(
+    card(
+      title = "Getting Started with R and RStudio",
+      image = "images/lcs.png",
+      text = "A walkthrough of installing R and RStudio on Windows and Mac including a bit of customizing RStudio's appearance.",
+      #link = "",
+      header = "Math/Stat 242"
+    ),
+    card(
+      title = "Project Based Workflow",
+      image = "images/lcs_1.png",
+      text = "A short discussion on the importance of project based workflows.",
+      #link = "",
+      header = "Math/Stat 242"
+    ),
+    card(
+      title = "Git R Done",
+      image = "images/lcs.png",
+      text = "Getting Git/GitHub and R/RStudio to communicate to make your project based workflow more efficient.",
+      #link = "",
+      header = "Math/Stat 242"
+    )
+)
+
+card_grid(two_fourty_two_list)
+```
