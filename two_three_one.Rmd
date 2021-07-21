@@ -24,6 +24,7 @@ We will have a total of seven computer labs using R and RStudio. There will be d
 All materials needed for lab days can be found in the [Stat231](https://www.github.com/npaterno/Stat231) R package. Students can install the package by running the code below in the console of RStudio (requires the `remotes`` package). As with R and RStudio, there will be dedicated time in class for this activity. 
 
 > install.packages("remotes")
+
 > remotes::install_github("npaterno/stat231", build_vignettes = TRUE)
 
 Each lesson can be found as a vignette in the help file. The corresponding assignments are available as RMarkdown templates.
