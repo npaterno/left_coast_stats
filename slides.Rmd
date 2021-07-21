@@ -3,7 +3,7 @@ title: "Slides"
 description: | 
   Slidedecks for courses at PLU
 output:
-  html_document:
+  distill::distill_article:
     includes:
       in_header: bs4_header.html
 ---
