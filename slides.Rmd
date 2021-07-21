@@ -31,7 +31,7 @@ library(bs4cards)
 two_fourty_two_list <- list(
     card(
       title = "Getting Started with R and RStudio",
-      image = "images/lcs.png",
+      image = "images/rstudio.jpg",
       text = "A walkthrough of installing R and RStudio on Windows and Mac including a bit of customizing RStudio's appearance.",
       link = "https://npaterno.github.io/intro_rstudio/intro_rstudio.html",
       header = "Math/Stat 242"
