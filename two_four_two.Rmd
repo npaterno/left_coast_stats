@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Course Goals
-*(Largely adapted from my collegue [Dr. Justice](https://sites.google.com/plu.edu/njustice/courses/stat-242?authuser=0))*
+*(Largely adapted from my colleague [Dr. Justice](https://sites.google.com/plu.edu/njustice/courses/stat-242?authuser=0))*
 
 By the end of this course, students will be able to navigate data-based claims that permeate our society and develop expertise to make informed data-based decisions. More specifically, students will:
 
@@ -32,4 +32,4 @@ All materials needed for lab days can be found in the [stat242](https://www.gith
 
 > remotes::install_github("npaterno/stat242", build_vignettes = TRUE)
 
-Each lesson can be found as a vignette in the help file or as a [slidedeck](https://npaterno.github.io/left_coast_stats/slides). The corresponding assignments are available as RMarkdown templates.
+Each lesson related to the statistical computing part of the course can be found as a vignette in the help file or as a [slidedeck](https://npaterno.github.io/left_coast_stats/slides). The corresponding assignments are available as RMarkdown templates.

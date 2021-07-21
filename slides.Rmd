@@ -33,7 +33,7 @@ two_fourty_two_list <- list(
       title = "Getting Started with R and RStudio",
       image = "images/lcs.png",
       text = "A walkthrough of installing R and RStudio on Windows and Mac including a bit of customizing RStudio's appearance.",
-      link = "https://npaterno.github.io/left_coast_stats/docs/intro_rstudio.html",
+      link = "https://npaterno.github.io/intro_rstudio/intro_rstudio.html",
       header = "Math/Stat 242"
     ),
     card(

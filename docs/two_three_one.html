@@ -2111,13 +2111,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /* Add any additional CSS rules below                      */
   </style>
   <style type="text/css">/* Styling sheet for personal site */
-  /* colors: #34FBED, #21A4B9 */
+  /* colors: #34FBED, #21A4B9, #FCD834 */
 
   h2{
     text-align: center;
     text-size: 30px;
     background: #34FBED;
-    color: #21A4B9;
     width: 100%;
     margin: 10px;
     padding-top: 10px;
@@ -2128,7 +2127,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-align: center;
     text-size: 15px;
     background: #21A4B9;
-    color: #21A4B9;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  h4{
+    text-align: center;
+    text-size: 10px;
+    background: #FCD834;
     margin: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -2364,7 +2371,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="r-package">R Package</h2>
 <p>All materials needed for lab days can be found in the <a href="https://www.github.com/npaterno/Stat231">Stat231</a> R package. Students can install the package by running the code below in the console of RStudio (requires the `remotes`` package). As with R and RStudio, there will be dedicated time in class for this activity.</p>
 <blockquote>
-<p>install.packages(“remotes”) remotes::install_github(“npaterno/stat231”, build_vignettes = TRUE)</p>
+<p>install.packages(“remotes”)</p>
+</blockquote>
+<blockquote>
+<p>remotes::install_github(“npaterno/stat231”, build_vignettes = TRUE)</p>
 </blockquote>
 <p>Each lesson can be found as a vignette in the help file. The corresponding assignments are available as RMarkdown templates.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
