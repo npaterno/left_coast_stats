@@ -45,9 +45,9 @@ two_fourty_two_list <- list(
     ),
     card(
       title = "Git R Done",
-      image = "images/lcs.png",
+      image = "images/github.png",
       text = "Getting Git/GitHub and R/RStudio to communicate to make your project based workflow more efficient.",
-      #link = "",
+      link = "https://npaterno.github.io/git_R_done/git_R_done.html",
       header = "Math/Stat 242"
     )
 )
