@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Academic 
 * BA, Mathematics, University of Montana, 2009
 * MS, Mathematics, Portland State University, 2011
+* [CV](https://npaterno.github.io/left_coast_stats/npaterno_cv.pdf)
 
 By profession I'm an academic. I started my career in January 2012. I've been a contingent faculty member the entire time. I currently teach as an adjunct associate professor at [Pierce College](https://pierce.ctc.edu) and as a resident instructor at [Pacific Lutheran University](https://www.plu.edu). 
 
