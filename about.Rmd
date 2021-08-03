@@ -12,9 +12,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Academic 
 * BA, Mathematics, University of Montana, 2009
-* MSc, Mathematics, Portland State University, 2011
+* MS, Mathematics, Portland State University, 2011
 
-By profession I'm an academic. I started my career in January 2012. I've been a contingent faculty member the entire time. I currently teach as an adjunct associate professor at [Pierce College](https://pierce.ctc.edu) and as a visiting instructor at [Pacific Lutheran University](https://www.plu.edu). 
+By profession I'm an academic. I started my career in January 2012. I've been a contingent faculty member the entire time. I currently teach as an adjunct associate professor at [Pierce College](https://pierce.ctc.edu) and as a resident instructor at [Pacific Lutheran University](https://www.plu.edu). 
 
 Aside from teaching but still under the academic umbrella, I am a contributor with [OpenIntro](https://www.openintro.org). Specifically I serve as the Data Management Lead. Fancy title that means I maintain an internal R package that serves as an intermediary between a team of volunteers, Data Hunters, and the \{openintro\} and \{usdata\} R packages. The Data Hunters compile and cultivate real world data sets for inclusion in the textbook and supplementary materials. If you're interested in becoming a Data Hunter, please [email me!](mailto:nick@openintro.org)
 
