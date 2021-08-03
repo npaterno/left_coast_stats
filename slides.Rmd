@@ -38,10 +38,10 @@ two_fourty_two_list <- list(
     ),
     card(
       title = "Project Based Workflow",
-      image = "images/lcs_1.png",
-      text = "A short discussion on the importance of project based workflows.",
-      #link = "",
-      header = "Math/Stat 242"
+      image = "images/here.png",
+      text = "A short discussion on the importance of project based workflows. (Illustration by Allison Horst)",
+      link = "https://npaterno.github.io/project_flow/project_flow.html",
+      header = "Math/Stat 242",
     ),
     card(
       title = "Git R Done",
