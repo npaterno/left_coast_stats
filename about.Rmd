@@ -23,7 +23,7 @@ Aside from teaching but still under the academic umbrella, I am a contributor wi
 In another life, I was a retail store manager at a local Fleet Feet. I spent years running 50+ miles per week and competing in races ranging from 5k's to 100 miles (* only one of those). At one point I was even a member of (now defunct) PowerBar TeamElite. I still run but I'm not so fast anymore.
 
 ## Tech Enthusiast 
-I have always enjoyed technology. I like to tinker and to keep things running as long as I can. I just recently had to replace my laptop after 8 years and am typing this on a 10 year old desktop. 
+I have always enjoyed technology. I like to tinker and to keep things running as long as possible and - when I can find the time and resrouces - to refurbish old computers for those in need. 
 
 ### Current Setup(s)
 
@@ -37,14 +37,11 @@ I have always enjoyed technology. I like to tinker and to keep things running as
 * Graphics: Nvidia GeForce GTX 1650
 
 #### Desktop
-* Dell XPS 8300
-* CPU: Intel Core i7-2600
-* CPU Cooler: Thermaltake Gravity i2
-* Memory: 32 GB DDR3-1333
-* Storage (boot): 240 GB Seagate BarraCuda ssd
-* Storage: 500 GB WD Blue hdd
-* WiFi: 802.11n
-* Graphics: Nvidia GT 710
+* Apple Mac Mini
+* CPU: Apple M1
+* Memory: 16 GB
+* Storage: 2 TB ssd
+* WiFi: 802.11ax
 
 #### Peripherals
 * Keyboard: Keychron K4
