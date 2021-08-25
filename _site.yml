@@ -23,6 +23,8 @@ navbar:
       href: two_three_one.html
     - text: "Stat 242" 
       href: two_four_two.html
+    - text: "Resources"
+      href: resources.html
     - icon: fab fa-twitter fa-lg
       href: https://twitter.com/Mathl3t3
     - icon: fab fa-linkedin fa-lg

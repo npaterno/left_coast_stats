@@ -44,8 +44,8 @@ I have always enjoyed technology. I like to tinker and to keep things running as
 * WiFi: 802.11ax
 
 #### Peripherals
-* Keyboard: Keychron K4
-* Keyboard: Keychron K6
+* Keyboard: Keychron K4 (Gateron Brown switches)
+* Keyboard: Keychron K6 (Gateron Blue switches)
 * Mouse: Corsair Harpoon
 * Monitors: 2 x Dell 27"
 
