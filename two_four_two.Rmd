@@ -23,7 +23,7 @@ By the end of this course, students will be able to navigate data-based claims t
 
 Our textbook is [Introduction to Modern Statistics 1st Ed.](https://openintro-ims.netlify.app/index.html).
 
-We will have a total of *n* computer labs using R and RStudio. There will be dedicated class time to installing the software or setting up a cloud account. Those who feel comfortable doing so can download [R](https://cran.r-project.org) and [RStudio](https://www.rstudio.com/download) prior to the start of class.
+We will have a total of 5 computer labs using R and RStudio. There will be dedicated class time to installing the software or setting up a cloud account. Those who feel comfortable doing so can download [R](https://cran.r-project.org) and [RStudio](https://www.rstudio.com/download) prior to the start of class.
 
 The weekly schedule and other resources can be found on our Sakai site. 
 
