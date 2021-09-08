@@ -2111,13 +2111,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /* Add any additional CSS rules below                      */
   </style>
   <style type="text/css">/* Styling sheet for personal site */
-  /* colors: #34FBED, #21A4B9 */
+  /* colors: #34FBED, #21A4B9, #FCD834 */
 
   h2{
     text-align: center;
     text-size: 30px;
     background: #34FBED;
-    color: #21A4B9;
     width: 100%;
     margin: 10px;
     padding-top: 10px;
@@ -2128,7 +2127,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-align: center;
     text-size: 15px;
     background: #21A4B9;
-    color: #21A4B9;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  h4{
+    text-align: center;
+    text-size: 10px;
+    background: #FCD834;
     margin: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -2288,7 +2295,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2298,6 +2305,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <script type="text/javascript" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-JD4PMFVY0X"></script>
+  <script type="text/javascript" cookie-consent="tracking">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JD4PMFVY0X');
+  </script>
   <!--/radix_placeholder_site_in_header-->
 
 
@@ -2361,10 +2375,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Our textbook is <a href="https://www.openintro.org/book/os">OpenIntro Statistics: 4th Ed.</a>.</p>
 <p>A graphing calculator will be useful for some of the computations we will do. Specifically instruction will be provided for the Ti-83/84 and Casio FX-750GII.</p>
 <p>We will have a total of seven computer labs using R and RStudio. There will be dedicated class time to installing the software or setting up a cloud account. Those who feel comfortable doing so can download <a href="https://cran.r-project.org">R</a> and <a href="https://www.rstudio.com/download">RStudio</a> prior to the start of class.</p>
+<p>The weekly schedule and other resources can be found on our Sakai site.</p>
 <h2 id="r-package">R Package</h2>
 <p>All materials needed for lab days can be found in the <a href="https://www.github.com/npaterno/Stat231">Stat231</a> R package. Students can install the package by running the code below in the console of RStudio (requires the `remotes`` package). As with R and RStudio, there will be dedicated time in class for this activity.</p>
 <blockquote>
-<p>install.packages(“remotes”) remotes::install_github(“npaterno/stat231”, build_vignettes = TRUE)</p>
+<p>install.packages(“remotes”)</p>
+</blockquote>
+<blockquote>
+<p>remotes::install_github(“npaterno/stat231”, build_vignettes = TRUE)</p>
 </blockquote>
 <p>Each lesson can be found as a vignette in the help file. The corresponding assignments are available as RMarkdown templates.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
@@ -2382,7 +2400,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
+<div class="distill-site-nav distill-site-footer">
+<p>© Copyright 2021 Nick Paterno</p>
+</div>
 <!--/radix_placeholder_navigation_after_body-->
+
 
 </body>
 

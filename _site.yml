@@ -3,7 +3,7 @@ title: "Left Coast Statistician"
 description: ""
 output_dir: "docs"
 theme: theme.css 
-#WRITE CSS FILE FOR SITE
+google_analytics: "G-JD4PMFVY0X"
 #base_url: https://blog.npaterno.net 
 #CHANGE URL ON GITHUB AFTER CASCADIA R
 navbar:
@@ -23,6 +23,8 @@ navbar:
       href: two_three_one.html
     - text: "Stat 242" 
       href: two_four_two.html
+    - text: "Resources"
+      href: resources.html
     - icon: fab fa-twitter fa-lg
       href: https://twitter.com/Mathl3t3
     - icon: fab fa-linkedin fa-lg

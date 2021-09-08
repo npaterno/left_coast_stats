@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Course Goals
-*(Largely adapted from my collegue [Dr. Justice](https://sites.google.com/plu.edu/njustice/courses/stat-242?authuser=0))*
+*(Largely adapted from my colleague [Dr. Justice](https://sites.google.com/plu.edu/njustice/courses/stat-242?authuser=0))*
 
 By the end of this course, students will be able to navigate data-based claims that permeate our society and develop expertise to make informed data-based decisions. More specifically, students will:
 
@@ -23,12 +23,15 @@ By the end of this course, students will be able to navigate data-based claims t
 
 Our textbook is [Introduction to Modern Statistics 1st Ed.](https://openintro-ims.netlify.app/index.html).
 
-We will have a total of *n* computer labs using R and RStudio. There will be dedicated class time to installing the software or setting up a cloud account. Those who feel comfortable doing so can download [R](https://cran.r-project.org) and [RStudio](https://www.rstudio.com/download) prior to the start of class.
+We will have a total of 5 computer labs using R and RStudio. There will be dedicated class time to installing the software or setting up a cloud account. Those who feel comfortable doing so can download [R](https://cran.r-project.org) and [RStudio](https://www.rstudio.com/download) prior to the start of class.
+
+The weekly schedule and other resources can be found on our Sakai site. 
 
 ## R Package 
 All materials needed for lab days can be found in the [stat242](https://www.github.com/npaterno/stat242) R package (*package under construction as of 7/14/21*). Students can install the package by running the code below in the console of RStudio (requires the `remotes`` package). As with R and RStudio, there will be dedicated time in class for this activity. 
 
 > install.packages("remotes")
+
 > remotes::install_github("npaterno/stat242", build_vignettes = TRUE)
 
-Each lesson can be found as a vignette in the help file or as a [slidedeck](https://npaterno.github.io/left_coast_stats/slides). The corresponding assignments are available as RMarkdown templates.
+Each lesson related to the statistical computing part of the course can be found as a vignette in the help file or as a [slidedeck](https://npaterno.github.io/left_coast_stats/slides). The corresponding assignments are available as RMarkdown templates.

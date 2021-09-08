@@ -3,7 +3,7 @@ title: "Slides"
 description: | 
   Slidedecks for courses at PLU
 output:
-  html_document:
+  distill::distill_article:
     includes:
       in_header: bs4_header.html
 ---
@@ -31,23 +31,23 @@ library(bs4cards)
 two_fourty_two_list <- list(
     card(
       title = "Getting Started with R and RStudio",
-      image = "images/lcs.png",
+      image = "images/rstudio.jpg",
       text = "A walkthrough of installing R and RStudio on Windows and Mac including a bit of customizing RStudio's appearance.",
-      #link = "",
+      link = "https://npaterno.github.io/intro_rstudio/intro_rstudio.html",
       header = "Math/Stat 242"
     ),
     card(
       title = "Project Based Workflow",
-      image = "images/lcs_1.png",
-      text = "A short discussion on the importance of project based workflows.",
-      #link = "",
-      header = "Math/Stat 242"
+      image = "images/here.png",
+      text = "A short discussion on the importance of project based workflows. (Illustration by Allison Horst)",
+      link = "https://npaterno.github.io/project_flow/project_flow.html",
+      header = "Math/Stat 242",
     ),
     card(
       title = "Git R Done",
-      image = "images/lcs.png",
+      image = "images/github.png",
       text = "Getting Git/GitHub and R/RStudio to communicate to make your project based workflow more efficient.",
-      #link = "",
+      link = "https://npaterno.github.io/git_R_done/git_R_done.html",
       header = "Math/Stat 242"
     )
 )
