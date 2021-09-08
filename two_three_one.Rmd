@@ -29,4 +29,6 @@ All materials needed for lab days can be found in the [Stat231](https://www.gith
 
 > remotes::install_github("npaterno/stat231", build_vignettes = TRUE)
 
-Each lesson can be found as a vignette in the help file. The corresponding assignments are available as RMarkdown templates.
+Each lesson can be found as a vignette in the help file. The corresponding assignments are available as RMarkdown templates. 
+
+[Slides](https://npaterno.github.io/left_coast_stats/slides) related to the labs and/or in class lectures can be found here. 

@@ -49,6 +49,13 @@ two_fourty_two_list <- list(
       text = "Getting Git/GitHub and R/RStudio to communicate to make your project based workflow more efficient.",
       link = "https://npaterno.github.io/git_R_done/git_R_done.html",
       header = "Math/Stat 242"
+    ),
+    card(
+      title = "OpenIntro",
+      image = "images/oi_logo.png",
+      text = "This site hosts all the slides from OpenIntro Statistics",
+      link = "https://openintro.org/book/os",
+      header = "Stat 231"
     )
 )
 
