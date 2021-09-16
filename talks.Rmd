@@ -4,7 +4,11 @@ description: |
   Slides for Talks
 ---
 
-## Cascadia R Conference, 2021
+## Cascadia R Conference: 7/5/2021
 -Teaching Non-STEM Student to Code
 -- [blog post](https://npaterno.github.io/left_coast_stats/posts/2021-06-07-cascadiarconf2021/)
 -- [slides](https://npaterno.github.io/cascadia_r_2021_talk/#1)
+
+## PLU Mathematics Seminar: 9/29/2021
+-Generative Art: Creating art with the R programming language
+-- [slides](https://npaterno.github.io/generative_art_talk/#1)
