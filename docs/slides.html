@@ -108,7 +108,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Slides"]},{"type":"character","attributes":{},"value":["Slidedecks for courses at PLU\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["includes"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["in_header"]}},"value":[{"type":"character","attributes":{},"value":["bs4_header.html"]}]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Slides"]},{"type":"character","attributes":{},"value":["Slidedecks for courses at PLU\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css"]}},"value":[{"type":"character","attributes":{},"value":["strapless.css"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -455,7 +455,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </style>
 
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -2295,7 +2295,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2313,11 +2313,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   gtag('config', 'G-JD4PMFVY0X');
   </script>
   <!--/radix_placeholder_site_in_header-->
-  <!-- bootstrap 4, for non-distill content -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="strapless.css" type="text/css"/>
 
 </head>
 
@@ -2378,56 +2375,61 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<div class="row m-0 mb-3 mt-3 p-0">
-<div class="card col-12 col-md-4 m-0 p-2 d-flex">
-<div class="card-header">Math/Stat 242</div>
+<div>
+<div class="row p-0 row-cols-1 row-cols-md-2 row-cols-lg-3" style="margin-left: -.2rem; margin-right: -.2rem; margin-top: 1rem; margin-bottom: 1rem; ">
+<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah bs4cards-NA" style="padding: .2rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
+<div class="card-header small text-muted px-3 py-auto" style="border-style:solid; border-color:#808080FF; border-width:1px 1px 0 1px; border-radius: .6rem .6rem 0 0 ;">Math/Stat 242</div>
 <a href="https://npaterno.github.io/intro_rstudio/intro_rstudio.html">
-<img class="card-img-top p-0" src="images/rstudio.jpg"/>
+<img src="images/rstudio.jpg" class="card-img-top" style="border-style:solid; border-color:#808080FF; border-width:1px 1px 0 1px; border-radius: 0 0 0 0 ;"/>
 </a>
-<div class="card-body">
+<div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: #FFFFFFAA; border-style:solid; border-color:#808080FF; border-width:1px; border-radius: 0 0 .6rem .6rem ;">
 <a href="https://npaterno.github.io/intro_rstudio/intro_rstudio.html">
-<h5 class="card-title">Getting Started with R and RStudio</h5>
+<h5 class="card-title my-auto px-3 pt-3 pb-1">Getting Started with R and RStudio</h5>
 </a>
-<p class="card-text">A walkthrough of installing R and RStudio on Windows and Mac including a bit of customizing RStudio's appearance.</p>
+<p class="card-text my-auto px-3 pb-3 pt-1">A walkthrough of installing R and RStudio on Windows and Mac including a bit of customizing RStudio's appearance.</p>
 </div>
 </div>
-<div class="card col-12 col-md-4 m-0 p-2 d-flex">
-<div class="card-header">Math/Stat 242</div>
+<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah bs4cards-NA" style="padding: .2rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
+<div class="card-header small text-muted px-3 py-auto" style="border-style:solid; border-color:#808080FF; border-width:1px 1px 0 1px; border-radius: .6rem .6rem 0 0 ;">Math/Stat 242</div>
 <a href="https://npaterno.github.io/project_flow/project_flow.html">
-<img class="card-img-top p-0" src="images/here.png"/>
+<img src="images/here.png" class="card-img-top" style="border-style:solid; border-color:#808080FF; border-width:1px 1px 0 1px; border-radius: 0 0 0 0 ;"/>
 </a>
-<div class="card-body">
+<div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: #FFFFFFAA; border-style:solid; border-color:#808080FF; border-width:1px; border-radius: 0 0 .6rem .6rem ;">
 <a href="https://npaterno.github.io/project_flow/project_flow.html">
-<h5 class="card-title">Project Based Workflow</h5>
+<h5 class="card-title my-auto px-3 pt-3 pb-1">Project Based Workflow</h5>
 </a>
-<p class="card-text">A short discussion on the importance of project based workflows. (Illustration by Allison Horst)</p>
+<p class="card-text my-auto px-3 pb-3 pt-1">A short discussion on the importance of project based workflows. (Illustration by Allison Horst)</p>
 </div>
 </div>
-<div class="card col-12 col-md-4 m-0 p-2 d-flex">
-<div class="card-header">Math/Stat 242</div>
+<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah bs4cards-NA" style="padding: .2rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
+<div class="card-header small text-muted px-3 py-auto" style="border-style:solid; border-color:#808080FF; border-width:1px 1px 0 1px; border-radius: .6rem .6rem 0 0 ;">Math/Stat 242</div>
 <a href="https://npaterno.github.io/git_R_done/git_R_done.html">
-<img class="card-img-top p-0" src="images/github.png"/>
+<img src="images/github.png" class="card-img-top" style="border-style:solid; border-color:#808080FF; border-width:1px 1px 0 1px; border-radius: 0 0 0 0 ;"/>
 </a>
-<div class="card-body">
+<div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: #FFFFFFAA; border-style:solid; border-color:#808080FF; border-width:1px; border-radius: 0 0 .6rem .6rem ;">
 <a href="https://npaterno.github.io/git_R_done/git_R_done.html">
-<h5 class="card-title">Git R Done</h5>
+<h5 class="card-title my-auto px-3 pt-3 pb-1">Git R Done</h5>
 </a>
-<p class="card-text">Getting Git/GitHub and R/RStudio to communicate to make your project based workflow more efficient.</p>
+<p class="card-text my-auto px-3 pb-3 pt-1">Getting Git/GitHub and R/RStudio to communicate to make your project based workflow more efficient.</p>
 </div>
 </div>
-<div class="card col-12 col-md-4 m-0 p-2 d-flex">
-<div class="card-header">Stat 231</div>
+<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah bs4cards-NA" style="padding: .2rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
+<div class="card-header small text-muted px-3 py-auto" style="border-style:solid; border-color:#808080FF; border-width:1px 1px 0 1px; border-radius: .6rem .6rem 0 0 ;">Stat 231</div>
 <a href="https://openintro.org/book/os">
-<img class="card-img-top p-0" src="images/oi_logo.png"/>
+<img src="images/oi_logo.png" class="card-img-top" style="border-style:solid; border-color:#808080FF; border-width:1px 1px 0 1px; border-radius: 0 0 0 0 ;"/>
 </a>
-<div class="card-body">
+<div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: #FFFFFFAA; border-style:solid; border-color:#808080FF; border-width:1px; border-radius: 0 0 .6rem .6rem ;">
 <a href="https://openintro.org/book/os">
-<h5 class="card-title">OpenIntro</h5>
+<h5 class="card-title my-auto px-3 pt-3 pb-1">OpenIntro</h5>
 </a>
-<p class="card-text">This site hosts all the slides from OpenIntro Statistics</p>
+<p class="card-text my-auto px-3 pb-3 pt-1">This site hosts all the slides from OpenIntro Statistics</p>
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
 </div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

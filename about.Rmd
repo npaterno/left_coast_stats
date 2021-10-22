@@ -36,6 +36,12 @@ I have always enjoyed technology. I like to tinker and to keep things running as
 * WiFi: 802.11ax
 * Graphics: Nvidia GeForce GTX 1650
 
+* Macbook Air
+* CPU: Apple M1
+* Memory: 16GB 
+* Storage: 256 GB ssd
+* WiFi: 802.11ax
+
 #### Desktop
 * Apple Mac Mini
 * CPU: Apple M1

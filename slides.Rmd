@@ -4,30 +4,38 @@ description: |
   Slidedecks for courses at PLU
 output:
   distill::distill_article:
-    includes:
-      in_header: bs4_header.html
+    css: "strapless.css"
 ---
 ```{r, echo = FALSE}
 library(bs4cards)
-
-#card(
-#  title = "",
-#  image = "",
-#  text = "",
-#  link = "",
-#  header = ""
-#)
-
-#kitty_list <- list(
-#  sample_card(), sample_card(), sample_card(), sample_card(),
-#  sample_card(), sample_card(), sample_card(), sample_card()
-#)
-
-#card_grid(kitty_list)
-
+library(dplyr)
 ```
 
 ```{r, echo = FALSE}
+slides <- tibble(long_name = c("Getting Started with R and RStudio", "Project Based Workflow", "Git R Done", "OpenIntro"),
+                 image_url = c("images/rstudio.jpg","images/here.png","images/github.png", "images/oi_logo.png"),
+                 blurb = c("A walkthrough of installing R and RStudio on Windows and Mac including a bit of customizing RStudio's appearance.", 
+                           "A short discussion on the importance of project based workflows. (Illustration by Allison Horst)",
+                           "Getting Git/GitHub and R/RStudio to communicate to make your project based workflow more efficient.",
+                           "This site hosts all the slides from OpenIntro Statistics"),
+                 deck_url = c("https://npaterno.github.io/intro_rstudio/intro_rstudio.html",
+                              "https://npaterno.github.io/project_flow/project_flow.html",
+                              "https://npaterno.github.io/git_R_done/git_R_done.html",
+                              "https://openintro.org/book/os"),
+                 header = c("Math/Stat 242","Math/Stat 242", "Math/Stat 242", "Stat 231"))
+                 
+slides %>% cards(
+  title = long_name, 
+  text = blurb,
+  image = image_url,
+  link = deck_url, 
+  header = header
+)
+```
+
+
+```{r, echo = FALSE, eval = FALSE}
+#Deprecated methods. Saving for now. 
 two_fourty_two_list <- list(
     card(
       title = "Getting Started with R and RStudio",
