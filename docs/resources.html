@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>Left Coast Statistician: Resources for Learning R</title>
@@ -1862,7 +1863,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -2403,10 +2407,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="https://www.youtube.com/watch?v=h29g21z0a68">ggplot2 workshop</a></li>
 </ul>
 <h2 id="version-control-with-git-and-github">Version Control with Git and GitHub</h2>
-<p>Here are a few screencasts I made on how to sync RStudio and GitHub. Both videos were created for the <a href="https://github.com/npaterno/data_hunters">data_hunters</a> at the <a href="https://openintro.org">OpenIntro Project</a>. If you’re interested in joining please <a href="mailto:nick@openintro.org">email me!</a></p>
+<p>Here are a few screencasts and tutorials I made on how to sync RStudio and GitHub. Both videos were created for the <a href="https://github.com/npaterno/data_hunters">data_hunters</a> at the <a href="https://openintro.org">OpenIntro Project</a>. If you’re interested in joining please <a href="mailto:nick@openintro.org">email me!</a></p>
 <ul>
 <li><a href="https://youtu.be/lHz-r2lJ2o8">For Windows</a> Everything after the 5:40 mark is for the data_hunters.</li>
 <li><a href="https://youtu.be/yfCe39JKBTE">For Mac</a> Everything after the 4:10 mark is for the data_hunters.</li>
+<li><a href="https://npaterno.github.io/left_coast_stats/open_source_workflow.html">GitHub &amp; RStudio:</a> Contributing to open source projects on GitHub from RStudio.</li>
 </ul>
 <h2 id="streaming">Streaming</h2>
 <ul>
