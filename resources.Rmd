@@ -33,6 +33,8 @@ Free online books for learning R.
 
 This section has links to articles, blogs, cheatsheets, tutorials, forums, etc. 
 
+* [Installing R and RStudio on Windows](https://youtu.be/rHZ9MGWxU5I)
+* [Installing R and RStudio on a Mac](https://youtu.be/AEebOXiMyyI) Includes both Intel and M1 Macs.
 * [R4DS Online Learning Community](https://www.rfordatasci.com): This is a community that was born from a book club for the above text. There is a very active Slack for this group as well as the website. 
 * [learnR](https://rstudio.github.io/learnr/): These tutorials can be followed online or in RStudio.
 * [introverse](https://spielmanlab.github.io/introverse/articles/introverse_rstudio.html)
@@ -45,7 +47,7 @@ This section has links to articles, blogs, cheatsheets, tutorials, forums, etc.
 
 ## Version Control with Git and GitHub
 
-Here are a few screencasts and tutorials I made on how to sync RStudio and GitHub. Both videos were created for the [data_hunters](https://github.com/npaterno/data_hunters) at the [OpenIntro Project](https://openintro.org). If you're interested in joining please [email me!](mailto:nick@openintro.org)
+If you've never contributed to an open source project on GitHub, this [tutorial](open_source_workflow.html) will walk you through the process using R and RStudio. For those who are more visual learners, below are a few screencasts I made on how to sync RStudio and GitHub. Both videos were created for the [data_hunters](https://github.com/npaterno/data_hunters) at the [OpenIntro Project](https://openintro.org). If you're interested in joining please [email me!](mailto:nick@openintro.org)
 
 * [For Windows](https://youtu.be/lHz-r2lJ2o8) Everything after the 5:40 mark is for the data_hunters.
 * [For Mac](https://youtu.be/yfCe39JKBTE) Everything after the 4:10 mark is for the data_hunters.
