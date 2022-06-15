@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -1030,10 +1031,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 1.5em;
   }
 
-  .figure img {
-    width: 100%;
-  }
-
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
@@ -1863,6 +1860,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1877,6 +1880,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1976,6 +2004,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1998,7 +2028,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2120,7 +2150,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   h2{
     text-align: center;
     text-size: 30px;
-    background: #34FBED;
+    background: ##153661;
     width: 100%;
     margin: 10px;
     padding-top: 10px;
@@ -2130,7 +2160,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   h3{
     text-align: center;
     text-size: 15px;
-    background: #21A4B9;
+    background: #4a6880;
     margin: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -2139,7 +2169,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   h4{
     text-align: center;
     text-size: 10px;
-    background: #FCD834;
+    background: #6791b1;
     margin: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -2299,7 +2329,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2374,61 +2404,132 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<p>This page will walk you through a workflow for contributing to open source projects with RStudio and GitHub. Specifically we will learn to fork/clone a GitHub repo, create a new branch, make changes and complete a pull request. Note: most - but not all - open source projects will follow a similar workflow. Be sure to go over the README for the project you want to contribute to as it will likely tell you their specific workflow.</p>
+<p>This page will walk you through a workflow for contributing to open
+source projects with RStudio and GitHub. Specifically we will learn to
+fork/clone a GitHub repo, create a new branch, make changes and complete
+a pull request. Note: most - but not all - open source projects will
+follow a similar workflow. Be sure to go over the README for the project
+you want to contribute to as it will likely tell you their specific
+workflow.</p>
 <h2 id="necessary-packages">Necessary packages</h2>
-<p>To follow this workflow you will need <code>usethis</code>, <code>gitcreds</code> and <code>gh</code>. If you will be working in package development, you may wish to install <code>devtools</code> in place of the last two - they’re included as dependent packages.</p>
+<p>To follow this workflow you will need <code>usethis</code>,
+<code>gitcreds</code> and <code>gh</code>. If you will be working in
+package development, you may wish to install <code>devtools</code> in
+place of the last two - they’re included as dependent packages.</p>
 <h2 id="linking-github-and-rstudio">Linking GitHub and RStudio</h2>
-<p><em>If you already have GitHub and RStudio linked you may skip to the next section. You may also skip any steps that are already completed.</em></p>
+<p><em>If you already have GitHub and RStudio linked you may skip to the
+next section. You may also skip any steps that are already
+completed.</em></p>
 <h3 id="step-1-installing-git">Step 1: Installing Git</h3>
-<p>Head over to the <a href="https://git-scm.com">git</a> and download the latest version of git. The monitor on the right side of the screen should automatically detect your operating system and provide a link to the latest version (see image below). Note: if you have a Mac, a binary package of git is included with Xcode.</p>
+<p>Head over to the <a href="https://git-scm.com">git</a> and download
+the latest version of git. The monitor on the right side of the screen
+should automatically detect your operating system and provide a link to
+the latest version (see image below). Note: if you have a Mac, a binary
+package of git is included with Xcode.</p>
 <figure>
-<img src="images/git_home.png" alt="A screenshot of the git homepage" /><figcaption aria-hidden="true">A screenshot of the git homepage</figcaption>
+<img src="images/git_home.png" alt="A screenshot of the git homepage" />
+<figcaption aria-hidden="true">A screenshot of the git
+homepage</figcaption>
 </figure>
-<h3 id="step-2-create-a-github-account">Step 2: Create a GitHub account</h3>
-<p>Next, navigate to <a href="https://github.com">GitHub</a> and create an account. The free account provides enough resources for the majority of users. Once complete, be sure to write down the email you used to register and your GitHub username as you’ll need them in the next step.</p>
-<h3 id="step-3-setting-up-your-git-credentials">Step 3: Setting up your Git credentials</h3>
-<p>This step can be completed in either Terminal (Linux/Mac), Command Prompt (Windows) or the <em>Terminal</em> tab in RStudio.</p>
-<p>Run each of the following commands sequentially, replacing your username and email where appropriate.</p>
+<h3 id="step-2-create-a-github-account">Step 2: Create a GitHub
+account</h3>
+<p>Next, navigate to <a href="https://github.com">GitHub</a> and create
+an account. The free account provides enough resources for the majority
+of users. Once complete, be sure to write down the email you used to
+register and your GitHub username as you’ll need them in the next
+step.</p>
+<h3 id="step-3-setting-up-your-git-credentials">Step 3: Setting up your
+Git credentials</h3>
+<p>This step can be completed in either Terminal (Linux/Mac), Command
+Prompt (Windows) or the <em>Terminal</em> tab in RStudio.</p>
+<p>Run each of the following commands sequentially, replacing your
+username and email where appropriate.</p>
 <blockquote>
 <p><code>git config --global user.name "your_github_user_name"</code></p>
 <p><code>git config --global user.email "email_for_github_login"</code></p>
 <p><code>git config --list</code></p>
 </blockquote>
-<p>The first two of these commands ties your machine to your GitHub account. The last one confirms the first two ran correctly by displaying the current Git configuration. If you use multiple development environments, you only need to run this process once! No need to redo it for each one.</p>
-<h3 id="step-4-linking-rstudio-and-github">Step 4: Linking RStudio and GitHub</h3>
-<p>Now that your computer is associated with your GitHub account, we need to give RStudio permission to access your repositories. The commands here are <code>R</code> commands so we’ll run them in the <em>Console</em> tab of RStudio.</p>
-<p>The first command will open a web browser to a page that will help generate a Personal Access Token or PAT (see image below). If you’re not already logged in to GitHub, you will see a login screen first.</p>
+<p>The first two of these commands ties your machine to your GitHub
+account. The last one confirms the first two ran correctly by displaying
+the current Git configuration. If you use multiple development
+environments, you only need to run this process once! No need to redo it
+for each one.</p>
+<h3 id="step-4-linking-rstudio-and-github">Step 4: Linking RStudio and
+GitHub</h3>
+<p>Now that your computer is associated with your GitHub account, we
+need to give RStudio permission to access your repositories. The
+commands here are <code>R</code> commands so we’ll run them in the
+<em>Console</em> tab of RStudio.</p>
+<p>The first command will open a web browser to a page that will help
+generate a Personal Access Token or PAT (see image below). If you’re not
+already logged in to GitHub, you will see a login screen first.</p>
 <blockquote>
 <p>`usethis::create_github_token()</p>
 </blockquote>
 <figure>
-<img src="images/github_pat.png" alt="A screenshot of the PAT creation page on GitHub" /><figcaption aria-hidden="true">A screenshot of the PAT creation page on GitHub</figcaption>
+<img src="images/github_pat.png"
+alt="A screenshot of the PAT creation page on GitHub" />
+<figcaption aria-hidden="true">A screenshot of the PAT creation page on
+GitHub</figcaption>
 </figure>
-<p>In the <em>Note</em> field, I recommend a descriptive label that will remind you what that token is for. The default is “R:GITHUB_PAT”; instead I would use “RStudio_laptop” or “RStudio_home-office”. When to set the expiration for your PAT is up to you. If it is for a short project or on a work device, I would recommend a relatively short expiration. The maximum is one year. After you’ve generated your token, copy it to the clipboard and head back to RStudio for the next line of code.</p>
+<p>In the <em>Note</em> field, I recommend a descriptive label that will
+remind you what that token is for. The default is “R:GITHUB_PAT”;
+instead I would use “RStudio_laptop” or “RStudio_home-office”. When to
+set the expiration for your PAT is up to you. If it is for a short
+project or on a work device, I would recommend a relatively short
+expiration. The maximum is one year. After you’ve generated your token,
+copy it to the clipboard and head back to RStudio for the next line of
+code.</p>
 <blockquote>
 <p><code>gitcreds::gitcreds_set()</code></p>
 </blockquote>
-<p>This will prompt you to enter your token. Paste it into the console and press enter. The following line of code will confirm that we’ve completed our setup.</p>
+<p>This will prompt you to enter your token. Paste it into the console
+and press enter. The following line of code will confirm that we’ve
+completed our setup.</p>
 <blockquote>
 <p><code>gh::gh_whoami()</code></p>
 </blockquote>
-<p>You should see your name, login, html_url, scopes (set during the token generation) and the token. Note only the first three and last four characters of the token are printed. No we’re ready to contribute to a project!</p>
+<p>You should see your name, login, html_url, scopes (set during the
+token generation) and the token. Note only the first three and last four
+characters of the token are printed. No we’re ready to contribute to a
+project!</p>
 <h2 id="contributing-to-a-project">Contributing to a project</h2>
-<p>For this section, we’ll be contributing to a demo repository. Code in this section will be run in the <em>Console</em> tab unless otherwise specified.</p>
+<p>For this section, we’ll be contributing to a demo repository. Code in
+this section will be run in the <em>Console</em> tab unless otherwise
+specified.</p>
 <h3 id="fork-and-clone">Fork and clone</h3>
-<p>First, we need to fork and clone the project we wish to contribute to.</p>
+<p>First, we need to fork and clone the project we wish to contribute
+to.</p>
 <blockquote>
 <p><code>usethis::create_from_github("npaterno/learning_git", fork = TRUE)</code></p>
 </blockquote>
-<p>This will do two things. First, it will fork the repository in GitHub. This means is will create a carbon copy of the original repository under your user account. You can make changes to this repository as much as you like without changing code in the main repo, called the <em>upstream</em> repository.</p>
-<p>Second, it will clone your forked repository into a new directory on your machine - the <em>origin</em> repository - that is linked to your carbon copy repository - the <em>remote</em> repository.</p>
+<p>This will do two things. First, it will fork the repository in
+GitHub. This means is will create a carbon copy of the original
+repository under your user account. You can make changes to this
+repository as much as you like without changing code in the main repo,
+called the <em>upstream</em> repository.</p>
+<p>Second, it will clone your forked repository into a new directory on
+your machine - the <em>origin</em> repository - that is linked to your
+carbon copy repository - the <em>remote</em> repository.</p>
 <h3 id="branching">Branching</h3>
-<p>Next, we want to create a new temporary branch to make our changes. This allows us to make a change to the repository without - potentially - causing problems in the main branch. In practice, this allows developers to add features or implement bug fixes and test them without accidentally breaking production code. If they <strong>do</strong> break code, its ok because its isolated on the new branch.</p>
+<p>Next, we want to create a new temporary branch to make our changes.
+This allows us to make a change to the repository without - potentially
+- causing problems in the main branch. In practice, this allows
+developers to add features or implement bug fixes and test them without
+accidentally breaking production code. If they <strong>do</strong> break
+code, its ok because its isolated on the new branch.</p>
 <blockquote>
 <p><code>usethis::pr_init(branch = "branch-name")</code></p>
 </blockquote>
-<p>You want to use an informative branch name. There are a few naming conventions floating around the web but a fairly standard one is <strong>type_description</strong> or <strong>author_type_description</strong>. For this example, I would use either <strong>feature_added-new-user</strong> or <strong>npaterno_feature_added-new-user</strong>.</p>
-<p>Open the “user.txt” file. On a new line, add your github username, an approximate location and your favorite morning beverage. Then save the file and transition to the <em>terminal</em> tab.</p>
+<p>You want to use an informative branch name. There are a few naming
+conventions floating around the web but a fairly standard one is
+<strong>type_description</strong> or
+<strong>author_type_description</strong>. For this example, I would use
+either <strong>feature_added-new-user</strong> or
+<strong>npaterno_feature_added-new-user</strong>.</p>
+<p>Open the “user.txt” file. On a new line, add your github username, an
+approximate location and your favorite morning beverage. Then save the
+file and transition to the <em>terminal</em> tab.</p>
 <h3 id="committing-changes">Committing changes</h3>
 <p>Run the code below in sequence.</p>
 <blockquote>
@@ -2437,22 +2538,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><code>git push origin main</code></p>
 </blockquote>
 <h3 id="pull-requests-pr">Pull Requests (PR)</h3>
-<p>Now that we’ve updated our carbon copy repo, we want to request that the maintainer(s) of the parent repo merges our changes. Before doing so, its a good idea to run this:</p>
+<p>Now that we’ve updated our carbon copy repo, we want to request that
+the maintainer(s) of the parent repo merges our changes. Before doing
+so, its a good idea to run this:</p>
 <blockquote>
 <p><code>usethis::pr_pause()</code></p>
 </blockquote>
-<p>This will freeze your temporary branch and merge and changes that have been made to the parent repo to ensure that you are branching from the most up-to-date version of the parent repo. Now we’re ready to push our pull request to GitHub.</p>
+<p>This will freeze your temporary branch and merge and changes that
+have been made to the parent repo to ensure that you are branching from
+the most up-to-date version of the parent repo. Now we’re ready to push
+our pull request to GitHub.</p>
 <blockquote>
 <p><code>usethis::pr_resume()</code></p>
 <p><code>usethis::pr_push()</code></p>
 </blockquote>
-<p>This will open up a GitHub page. Click on the green “Create pull request” button. Fill out the form and press “Create pull request” a second time. This will submit a pull request to the maintainer(s) of the parent repo. They will either merge your request or possibly ask that you make some changes to the PR before it is merged.</p>
-<p>Once the maintainer(s) have merged your PR, you should receive an email stating as much. Once you have that email, hop back into RStudio and run this in the console:</p>
+<p>This will open up a GitHub page. Click on the green “Create pull
+request” button. Fill out the form and press “Create pull request” a
+second time. This will submit a pull request to the maintainer(s) of the
+parent repo. They will either merge your request or possibly ask that
+you make some changes to the PR before it is merged.</p>
+<p>Once the maintainer(s) have merged your PR, you should receive an
+email stating as much. Once you have that email, hop back into RStudio
+and run this in the console:</p>
 <blockquote>
 <p><code>usethis::pr_finish()</code></p>
 </blockquote>
-<p>This will do a few things: switch to your main branch, pull changes from down to your local machine, delete your local temporary branch = and delete your remote temporary branch. Your changes now live on the main branch of the parent repo and your carbon copy has been updated to reflect the changes. Congratulations! You’ve made your first contribution to an open source project!</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>This will do a few things: switch to your main branch, pull changes
+from down to your local machine, delete your local temporary branch =
+and delete your remote temporary branch. Your changes now live on the
+main branch of the parent repo and your carbon copy has been updated to
+reflect the changes. Congratulations! You’ve made your first
+contribution to an open source project!</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
