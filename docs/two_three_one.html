@@ -458,8 +458,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
   <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
@@ -788,6 +788,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1860,15 +1861,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -2329,7 +2336,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2405,45 +2412,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h2 id="course-goals">Course Goals</h2>
-<p>This is a first course in statistics designed for non-STEM majors. An
-emphasis is placed on a broad understanding of topics in sampling
-methods, basic probability, hypothesis testing, confidence intervals and
-linear regression. Students will also be introduced to statistical
-computing.</p>
+<p>This is a first course in statistics designed for non-STEM majors. An emphasis is placed on a broad understanding of topics in sampling methods, basic probability, hypothesis testing, confidence intervals and linear regression. Students will also be introduced to statistical computing.</p>
 <h2 id="course-materials">Course Materials</h2>
-<p>Our textbook is <a href="https://www.openintro.org/book/os">OpenIntro
-Statistics: 4th Ed.</a>.</p>
-<p>A graphing calculator will be useful for some of the computations we
-will do. Specifically instruction will be provided for the Ti-83/84 and
-Casio FX-750GII.</p>
-<p>We will have a total of seven computer labs using R and RStudio.
-There will be dedicated class time to installing the software or setting
-up a cloud account. Those who feel comfortable doing so can download <a
-href="https://cran.r-project.org">R</a> and <a
-href="https://www.rstudio.com/download">RStudio</a> prior to the start
-of class.</p>
-<p>The weekly schedule and other resources can be found on our Sakai
-site.</p>
+<p>Our textbook is <a href="https://www.openintro.org/book/os">OpenIntro Statistics: 4th Ed.</a>.</p>
+<p>A graphing calculator will be useful for some of the computations we will do. Specifically instruction will be provided for the Ti-83/84 and Casio FX-750GII.</p>
+<p>We will have a total of seven computer labs using R and RStudio. There will be dedicated class time to installing the software or setting up a cloud account. Those who feel comfortable doing so can download <a href="https://cran.r-project.org">R</a> and <a href="https://www.rstudio.com/download">RStudio</a> prior to the start of class.</p>
+<p>The weekly schedule and other resources can be found on our Sakai site.</p>
 <h2 id="r-package">R Package</h2>
-<p>All materials needed for lab days can be found in the <a
-href="https://www.github.com/npaterno/Stat231">Stat231</a> R package.
-Students can install the package by running the code below in the
-console of RStudio (requires the `remotes`` package). As with R and
-RStudio, there will be dedicated time in class for this activity.</p>
+<p>All materials needed for lab days can be found in the <a href="https://www.github.com/npaterno/Stat231">Stat231</a> R package. Students can install the package by running the code below in the console of RStudio (requires the `remotes`` package). As with R and RStudio, there will be dedicated time in class for this activity.</p>
 <blockquote>
 <p>install.packages(“remotes”)</p>
 </blockquote>
 <blockquote>
-<p>remotes::install_github(“npaterno/stat231”, build_vignettes =
-TRUE)</p>
+<p>remotes::install_github(“npaterno/stat231”, build_vignettes = TRUE)</p>
 </blockquote>
-<p>Each lesson can be found as a vignette in the help file. The
-corresponding assignments are available as RMarkdown templates.</p>
-<p><a
-href="https://npaterno.github.io/left_coast_stats/slides">Slides</a>
-related to the labs and/or in class lectures can be found here.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Each lesson can be found as a vignette in the help file. The corresponding assignments are available as RMarkdown templates.</p>
+<p><a href="https://npaterno.github.io/left_coast_stats/slides">Slides</a> related to the labs and/or in class lectures can be found here.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

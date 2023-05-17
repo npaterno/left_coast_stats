@@ -1,62 +1,13 @@
 ---
-title: "Resources for Learning R"
+title: "Resources"
 description: | 
-  A list of links that may be useful for learning to code in R.
+  Resources for anyone interested in learning R or LaTeX.
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-*If any section is missing a resource that you found useful please [let me know](mailto:nicholas.paterno@gmail.com) so I can add it to this list!*
+[R Resources](https://npaterno.github.io/left_coast_stats/r_resources)
 
-## Online Development Environments:
-
-* [RStudio Cloud](https://cloud.rstudio.com)
-* [Google Colab](https://colab.to/r)
-* [Jupyter Notebooks](https://hub-binder.mybinder.ovh/user/binder-examples-r-yfs7lkd5/notebooks/index.ipynb)
-
-## Desktop Development Environments
-
-* [RStudio](https://rstudio.com)
-* [Jupyter Notebooks](https://jupyter.org)
-* [VS Code](https://code.visualstudio.com)
-
-## Books
-
-Free online books for learning R. 
-
-* [ModernDive](https://moderndive.com)
-* [R for Data Science](https://r4ds.had.co.nz)
-
-## Readings and Tutorials
-
-This section has links to articles, blogs, cheatsheets, tutorials, forums, etc. 
-
-* [Installing R and RStudio on Windows](https://youtu.be/rHZ9MGWxU5I)
-* [Installing R and RStudio on a Mac](https://youtu.be/AEebOXiMyyI) Includes both Intel and M1 Macs.
-* [R4DS Online Learning Community](https://www.rfordatasci.com): This is a community that was born from a book club for the above text. There is a very active Slack for this group as well as the website. 
-* [learnR](https://rstudio.github.io/learnr/): These tutorials can be followed online or in RStudio.
-* [introverse](https://spielmanlab.github.io/introverse/articles/introverse_rstudio.html)
-* [Project-oriented Workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) This article gives a few great examples of why a project-oriented workflow is very useful and efficient. 
-* [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
-* [R Colors](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)
-* [ggplot Shapes](https://www.google.com/search?q=ggplot2+shapes&sxsrf=ALeKk034-Ctt49yx7pGC2gw5C47Pp5Z1ow:1626207078767&tbm=isch&source=iu&ictx=1&fir=lUw3nrgRKV8ynM%252CIUJ7_WAFJeseUM%252C_&vet=1&usg=AI4_-kTnTzMHlYnJgmnzjPDlko-F9bTTJQ&sa=X&ved=2ahUKEwjq4Yq67eDxAhXHjp4KHTeiDxoQ9QF6BAgSEAE&biw=1502&bih=710#imgrc=lUw3nrgRKV8ynM)
-* [R4DS: TidyTuesday](https://github.com/rfordatascience/tidytuesday): you can also search Twitter for \#tidytuesday
-* [ggplot2 workshop](https://www.youtube.com/watch?v=h29g21z0a68)
-
-## Version Control with Git and GitHub
-
-If you've never contributed to an open source project on GitHub, this [tutorial](open_source_workflow.html) will walk you through the process using R and RStudio. For those who are more visual learners, below are a few screencasts I made on how to sync RStudio and GitHub. Both videos were created for the [data_hunters](https://github.com/npaterno/data_hunters) at the [OpenIntro Project](https://openintro.org). If you're interested in joining please [email me!](mailto:nick@openintro.org)
-
-* [For Windows](https://youtu.be/lHz-r2lJ2o8) Everything after the 5:40 mark is for the data_hunters.
-* [For Mac](https://youtu.be/yfCe39JKBTE) Everything after the 4:10 mark is for the data_hunters.
-* [GitHub & RStudio:](https://npaterno.github.io/left_coast_stats/open_source_workflow.html) Contributing to open source projects on GitHub from RStudio.
-
-## Streaming
-
-* [#SLICED](https://www.notion.so/SLICED-Show-c7bd26356e3a42279e2dfbafb0480073): This is a live, data science competition. For those who are more visual, this is a great way to watch people who use R on a regular basis and see their process. 
-* [Jesse Mostipak](https://www.twitch.tv/kierisi): Jesse streams a few times per week on Twitch and has participated in \#SLICED.
-* [Moriah Taylor](https://www.twitch.tv/moriah_streamR): Moriah streams her work on for TidyTuesday projects. 
-* [David Robinson](https://www.youtube.com/channel/UCeiiqmVK07qhY-wvg3IZiZQ): David usually streams once per week and has also participated in \#SLICED.
-* [Julia Silge](https://www.youtube.com/channel/UCTTBgWyJl2HrrhQOOc710kA): Julia also streams her TidyTuesday projects. She usually focuses on modeling in addition to data viz. She has also been involved with \#SLICED.
+[LaTeX Resources](https://latex-project.org) *Under development*

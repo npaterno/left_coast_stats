@@ -88,29 +88,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Left Coast Statistician: About Me</title>
+  <title>Left Coast Statistician: Resources for Learning R</title>
 
-  <meta property="description" itemprop="description" content="Musings of an academic without a PhD."/>
+  <meta property="description" itemprop="description" content="A list of links that may be useful for learning to code in R."/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Left Coast Statistician: About Me"/>
+  <meta property="og:title" content="Left Coast Statistician: Resources for Learning R"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Musings of an academic without a PhD."/>
+  <meta property="og:description" content="A list of links that may be useful for learning to code in R."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Left Coast Statistician"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Left Coast Statistician: About Me"/>
-  <meta property="twitter:description" content="Musings of an academic without a PhD."/>
+  <meta property="twitter:title" content="Left Coast Statistician: Resources for Learning R"/>
+  <meta property="twitter:description" content="A list of links that may be useful for learning to code in R."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About Me"]},{"type":"character","attributes":{},"value":["Musings of an academic without a PhD."]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["Resources for Learning R"]},{"type":"character","attributes":{},"value":["A list of links that may be useful for learning to code in R."]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -458,8 +458,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
   <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
@@ -788,6 +788,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1860,15 +1861,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -2329,7 +2336,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2356,7 +2363,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About Me","description":"Musings of an academic without a PhD.","authors":[]}
+{"title":"Resources for Learning R","description":"A list of links that may be useful for learning to code in R.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2396,85 +2403,64 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About Me</h1>
+<h1>Resources for Learning R</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Musings of an academic without a PhD.</p></p>
+<p><p>A list of links that may be useful for learning to code in R.</p></p>
 </div>
 
 
 <div class="d-article">
-<p><img src="images/profile.jpg" /></p>
-<h2 id="academic">Academic</h2>
+<p><em>If any section is missing a resource that you found useful please <a href="mailto:nicholas.paterno@gmail.com">let me know</a> so I can add it to this list!</em></p>
+<h2 id="online-development-environments">Online Development Environments:</h2>
 <ul>
-<li>BA, Mathematics, University of Montana, 2009</li>
-<li>MS, Mathematics, Portland State University, 2011</li>
-<li><a
-href="https://npaterno.github.io/left_coast_stats/npaterno_cv.pdf">CV</a></li>
+<li><a href="https://cloud.rstudio.com">RStudio Cloud</a></li>
+<li><a href="https://colab.to/r">Google Colab</a></li>
+<li><a href="https://hub-binder.mybinder.ovh/user/binder-examples-r-yfs7lkd5/notebooks/index.ipynb">Jupyter Notebooks</a></li>
 </ul>
-<p>By profession I’m an academic. I started my career in January 2012.
-I’ve been a contingent faculty member the entire time. I currently teach
-as an adjunct associate professor at <a
-href="https://pierce.ctc.edu">Pierce College</a> and as a resident
-instructor at <a href="https://www.plu.edu">Pacific Lutheran
-University</a>.</p>
-<p>Aside from teaching but still under the academic umbrella, I am a
-contributor with <a href="https://www.openintro.org">OpenIntro</a>.
-Specifically I serve as the Data Management Lead. Fancy title that means
-I maintain an internal R package that serves as an intermediary between
-a team of volunteers, Data Hunters, and the {openintro} and {usdata} R
-packages. The Data Hunters compile and cultivate real world data sets
-for inclusion in the textbook and supplementary materials. If you’re
-interested in becoming a Data Hunter, please <a
-href="mailto:nick@openintro.org">email me!</a></p>
-<h2 id="runner">Runner</h2>
-<p>In another life, I was a retail store manager at a local Fleet Feet.
-I spent years running 50+ miles per week and competing in races ranging
-from 5k’s to 100 miles (* only one of those). At one point I was even a
-member of (now defunct) PowerBar TeamElite. I still run but I’m not so
-fast anymore.</p>
-<h2 id="tech-enthusiast">Tech Enthusiast</h2>
-<p>I have always enjoyed technology. I like to tinker and to keep things
-running as long as possible and - when I can find the time and resrouces
-- to refurbish old computers for those in need.</p>
-<h3 id="current-setups">Current Setup(s)</h3>
-<h4 id="laptop">Laptop</h4>
+<h2 id="desktop-development-environments">Desktop Development Environments</h2>
 <ul>
-<li><p>Dell G3 3590</p></li>
-<li><p>CPU: Intel Core i7-9750h</p></li>
-<li><p>Memory: 32 GB Crucial Ballistix DDR4-2666</p></li>
-<li><p>Storage (boot): 500 GB Samsung 970 EVO m.2 nvme ssd</p></li>
-<li><p>Storage: 1 TB Seagate hdd</p></li>
-<li><p>WiFi: 802.11ax</p></li>
-<li><p>Graphics: Nvidia GeForce GTX 1650</p></li>
-<li><p>Macbook Air</p></li>
-<li><p>CPU: Apple M1</p></li>
-<li><p>Memory: 16GB</p></li>
-<li><p>Storage: 256 GB ssd</p></li>
-<li><p>WiFi: 802.11ax</p></li>
+<li><a href="https://rstudio.com">RStudio</a></li>
+<li><a href="https://jupyter.org">Jupyter Notebooks</a></li>
+<li><a href="https://code.visualstudio.com">VS Code</a></li>
 </ul>
-<h4 id="desktop">Desktop</h4>
+<h2 id="books">Books</h2>
+<p>Free online books for learning R.</p>
 <ul>
-<li>Apple Mac Mini</li>
-<li>CPU: Apple M1</li>
-<li>Memory: 16 GB</li>
-<li>Storage: 2 TB ssd</li>
-<li>WiFi: 802.11ax</li>
+<li><a href="https://moderndive.com">ModernDive</a></li>
+<li><a href="https://r4ds.had.co.nz">R for Data Science</a></li>
 </ul>
-<h4 id="peripherals">Peripherals</h4>
+<h2 id="readings-and-tutorials">Readings and Tutorials</h2>
+<p>This section has links to articles, blogs, cheatsheets, tutorials, forums, etc.</p>
 <ul>
-<li>Keyboard: Keychron K4 (Gateron Brown switches)</li>
-<li>Keyboard: Keychron K6 (Gateron Blue switches)</li>
-<li>Mouse: Corsair Harpoon</li>
-<li>Monitors: 2 x Dell 27”</li>
+<li><a href="https://youtu.be/rHZ9MGWxU5I">Installing R and RStudio on Windows</a></li>
+<li><a href="https://youtu.be/AEebOXiMyyI">Installing R and RStudio on a Mac</a> Includes both Intel and M1 Macs.</li>
+<li><a href="https://www.rfordatasci.com">R4DS Online Learning Community</a>: This is a community that was born from a book club for the above text. There is a very active Slack for this group as well as the website.</li>
+<li><a href="https://rstudio.github.io/learnr/">learnR</a>: These tutorials can be followed online or in RStudio.</li>
+<li><a href="https://spielmanlab.github.io/introverse/articles/introverse_rstudio.html">introverse</a></li>
+<li><a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-oriented Workflow</a> This article gives a few great examples of why a project-oriented workflow is very useful and efficient.</li>
+<li><a href="https://www.rstudio.com/resources/cheatsheets/">RStudio Cheatsheets</a></li>
+<li><a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">R Colors</a></li>
+<li><a href="https://www.google.com/search?q=ggplot2+shapes&amp;sxsrf=ALeKk034-Ctt49yx7pGC2gw5C47Pp5Z1ow:1626207078767&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;fir=lUw3nrgRKV8ynM%252CIUJ7_WAFJeseUM%252C_&amp;vet=1&amp;usg=AI4_-kTnTzMHlYnJgmnzjPDlko-F9bTTJQ&amp;sa=X&amp;ved=2ahUKEwjq4Yq67eDxAhXHjp4KHTeiDxoQ9QF6BAgSEAE&amp;biw=1502&amp;bih=710#imgrc=lUw3nrgRKV8ynM">ggplot Shapes</a></li>
+<li><a href="https://github.com/rfordatascience/tidytuesday">R4DS: TidyTuesday</a>: you can also search Twitter for #tidytuesday</li>
+<li><a href="https://www.youtube.com/watch?v=h29g21z0a68">ggplot2 workshop</a></li>
 </ul>
-<h4 id="nas">NAS</h4>
+<h2 id="version-control-with-git-and-github">Version Control with Git and GitHub</h2>
+<p>If you’ve never contributed to an open source project on GitHub, this <a href="open_source_workflow.html">tutorial</a> will walk you through the process using R and RStudio. For those who are more visual learners, below are a few screencasts I made on how to sync RStudio and GitHub. Both videos were created for the <a href="https://github.com/npaterno/data_hunters">data_hunters</a> at the <a href="https://openintro.org">OpenIntro Project</a>. If you’re interested in joining please <a href="mailto:nick@openintro.org">email me!</a></p>
 <ul>
-<li>Synology DS 220j</li>
-<li>2 x 4 TB Seagate Ironwolf (raid 1)</li>
+<li><a href="https://youtu.be/lHz-r2lJ2o8">For Windows</a> Everything after the 5:40 mark is for the data_hunters.</li>
+<li><a href="https://youtu.be/yfCe39JKBTE">For Mac</a> Everything after the 4:10 mark is for the data_hunters.</li>
+<li><a href="https://npaterno.github.io/left_coast_stats/open_source_workflow.html">GitHub &amp; RStudio:</a> Contributing to open source projects on GitHub from RStudio.</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h2 id="streaming">Streaming</h2>
+<ul>
+<li><a href="https://www.notion.so/SLICED-Show-c7bd26356e3a42279e2dfbafb0480073">#SLICED</a>: This is a live, data science competition. For those who are more visual, this is a great way to watch people who use R on a regular basis and see their process.</li>
+<li><a href="https://www.twitch.tv/kierisi">Jesse Mostipak</a>: Jesse streams a few times per week on Twitch and has participated in #SLICED.</li>
+<li><a href="https://www.twitch.tv/moriah_streamR">Moriah Taylor</a>: Moriah streams her work on for TidyTuesday projects.</li>
+<li><a href="https://www.youtube.com/channel/UCeiiqmVK07qhY-wvg3IZiZQ">David Robinson</a>: David usually streams once per week and has also participated in #SLICED.</li>
+<li><a href="https://www.youtube.com/channel/UCTTBgWyJl2HrrhQOOc710kA">Julia Silge</a>: Julia also streams her TidyTuesday projects. She usually focuses on modeling in addition to data viz. She has also been involved with #SLICED.</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
