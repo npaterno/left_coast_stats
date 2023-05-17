@@ -8,7 +8,9 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-![](images/profile.jpg)
+<center>
+![](images/profile.jpg){width=40%}
+</center>
 
 ## Academic 
 * BA, Mathematics, University of Montana, 2009
