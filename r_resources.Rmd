@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [RStudio Cloud](https://cloud.rstudio.com)
 * [Google Colab](https://colab.to/r)
-* [Jupyter Notebooks](https://hub-binder.mybinder.ovh/user/binder-examples-r-yfs7lkd5/notebooks/index.ipynb)
+* [Jupyter Notebooks](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb)
 
 ## Desktop Development Environments
 
@@ -44,6 +44,7 @@ This section has links to articles, blogs, cheatsheets, tutorials, forums, etc.
 * [ggplot Shapes](https://www.google.com/search?q=ggplot2+shapes&sxsrf=ALeKk034-Ctt49yx7pGC2gw5C47Pp5Z1ow:1626207078767&tbm=isch&source=iu&ictx=1&fir=lUw3nrgRKV8ynM%252CIUJ7_WAFJeseUM%252C_&vet=1&usg=AI4_-kTnTzMHlYnJgmnzjPDlko-F9bTTJQ&sa=X&ved=2ahUKEwjq4Yq67eDxAhXHjp4KHTeiDxoQ9QF6BAgSEAE&biw=1502&bih=710#imgrc=lUw3nrgRKV8ynM)
 * [R4DS: TidyTuesday](https://github.com/rfordatascience/tidytuesday): you can also search Twitter for \#tidytuesday
 * [ggplot2 workshop](https://www.youtube.com/watch?v=h29g21z0a68)
+* [Intro to Modern Statistics Labs](https://openintrostat.github.io/ims-tutorials/) A set of tutorials/labs that accompany the textbook [Introduction to Modern Statistics](https://www.openintro.org/book/ims/). They also work as a standalone intro to R for those who already know statistics.
 
 ## Version Control with Git and GitHub
 
